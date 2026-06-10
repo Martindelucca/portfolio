@@ -60,3 +60,6 @@ if (contactForm) {
     formStatus.classList.remove('hidden');
   });
 }
+
+// --- Footer year ---
+document.getElementById('current-year').textContent = new Date().getFullYear();
