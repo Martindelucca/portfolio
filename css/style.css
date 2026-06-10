@@ -1,1 +1,19 @@
-/* Custom styles — minimal overrides */
+/* --- Navbar --- */
+#navbar.scrolled {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.dark #navbar.scrolled {
+  background: rgba(15, 23, 42, 0.9);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#mobile-menu {
+  transition: opacity 0.2s ease;
+}
+
+#mobile-menu:not(.hidden) {
+  display: block;
+}

@@ -18,6 +18,50 @@
 </head>
 <body class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
 
+<header id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
+  <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#inicio" class="text-xl font-bold text-indigo-600 dark:text-indigo-400">[TuNombre]</a>
+
+    <div class="hidden md:flex gap-8 text-sm font-medium">
+      <a href="#inicio" class="nav-link hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Inicio</a>
+      <a href="#sobre-mi" class="nav-link hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Sobre Mí</a>
+      <a href="#skills" class="nav-link hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Skills</a>
+      <a href="#proyectos" class="nav-link hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Proyectos</a>
+      <a href="#contacto" class="nav-link hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contacto</a>
+    </div>
+
+    <div class="flex items-center gap-4">
+      <button id="theme-toggle" class="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" aria-label="Cambiar tema">
+        <svg id="sun-icon" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+        </svg>
+        <svg id="moon-icon" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+        </svg>
+      </button>
+
+      <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" aria-label="Menú">
+        <svg id="menu-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="menu-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="md:hidden hidden bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-t border-slate-200 dark:border-slate-700">
+    <div class="px-6 py-4 flex flex-col gap-3 text-sm font-medium">
+      <a href="#inicio" class="mobile-link hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Inicio</a>
+      <a href="#sobre-mi" class="mobile-link hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Sobre Mí</a>
+      <a href="#skills" class="mobile-link hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Skills</a>
+      <a href="#proyectos" class="mobile-link hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Proyectos</a>
+      <a href="#contacto" class="mobile-link hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contacto</a>
+    </div>
+  </div>
+</header>
+
   <script src="js/main.js"></script>
 </body>
 </html>
