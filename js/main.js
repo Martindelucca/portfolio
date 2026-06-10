@@ -31,3 +31,32 @@ document.querySelectorAll('.nav-link, .mobile-link').forEach(link => {
     menuClose.classList.add('hidden');
   });
 });
+
+// --- Contact form ---
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(contactForm);
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        formStatus.textContent = 'Mensaje enviado con exito! Te respondere pronto.';
+        formStatus.className = 'text-sm text-center text-green-600 dark:text-green-400';
+        contactForm.reset();
+      } else {
+        throw new Error('Error al enviar');
+      }
+    } catch (err) {
+      formStatus.textContent = 'Hubo un error. Intenta de nuevo o escribime por WhatsApp.';
+      formStatus.className = 'text-sm text-center text-red-600 dark:text-red-400';
+    }
+    formStatus.classList.remove('hidden');
+  });
+}
