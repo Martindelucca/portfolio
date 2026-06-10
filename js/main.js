@@ -1,3 +1,28 @@
+// --- Dark mode ---
+const themeToggle = document.getElementById('theme-toggle');
+const html = document.documentElement;
+
+function setTheme(theme) {
+  if (theme === 'dark') {
+    html.classList.add('dark');
+  } else {
+    html.classList.remove('dark');
+  }
+  localStorage.setItem('theme', theme);
+}
+
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  setTheme(savedTheme);
+} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  setTheme('dark');
+}
+
+themeToggle.addEventListener('click', () => {
+  const isDark = html.classList.contains('dark');
+  setTheme(isDark ? 'light' : 'dark');
+});
+
 // --- Navbar ---
 const navbar = document.getElementById('navbar');
 const menuToggle = document.getElementById('menu-toggle');
@@ -63,3 +88,20 @@ if (contactForm) {
 
 // --- Footer year ---
 document.getElementById('current-year').textContent = new Date().getFullYear();
+
+// --- Scroll reveal ---
+const revealElements = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+});
+
+revealElements.forEach(el => observer.observe(el));
