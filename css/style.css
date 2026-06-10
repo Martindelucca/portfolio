@@ -17,3 +17,45 @@
 #mobile-menu:not(.hidden) {
   display: block;
 }
+
+/* --- Timeline --- */
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #6366f1;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #6366f1;
+  border: 2px solid #f8fafc;
+}
+
+.dark .timeline-item::before {
+  border-color: #0f172a;
+}
+
+@media (min-width: 768px) {
+  .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .timeline-item::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
