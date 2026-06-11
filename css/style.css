@@ -616,6 +616,122 @@ html {
   50% { transform: scale(0.85); box-shadow: 0 0 0 11px rgba(16, 185, 129, 0.08); }
 }
 
+/* --- Process --- */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.process-step {
+  border: 1px solid rgba(212, 212, 216, 0.75);
+  border-radius: 2rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+}
+
+.dark .process-step {
+  border-color: rgba(63, 63, 70, 0.85);
+  background: rgba(24, 24, 27, 0.65);
+}
+
+.process-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0e7490;
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.dark .process-num {
+  color: #22d3ee;
+}
+
+.process-step h3 {
+  font-size: clamp(1.1rem, 1.4vw, 1.5rem);
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.process-step p {
+  color: #52525b;
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.dark .process-step p {
+  color: #a1a1aa;
+}
+
+/* --- FAQ --- */
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.faq-item {
+  border: 1px solid rgba(212, 212, 216, 0.7);
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.dark .faq-item {
+  border-color: rgba(63, 63, 70, 0.8);
+  background: rgba(24, 24, 27, 0.6);
+}
+
+.faq-item summary {
+  padding: 1.25rem 1.5rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0e7490;
+  transition: transform 0.25s ease;
+}
+
+.dark .faq-item summary::after {
+  color: #22d3ee;
+}
+
+.faq-item[open] summary::after {
+  content: '−';
+  transform: rotate(0deg);
+}
+
+.faq-item p {
+  padding: 0 1.5rem 1.25rem;
+  color: #52525b;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.dark .faq-item p {
+  color: #a1a1aa;
+}
+
 @media (max-width: 900px) {
   .section-block {
     padding: 5rem 1.25rem;
@@ -632,7 +748,9 @@ html {
   .services-grid,
   .skill-layout,
   .case-study,
-  .feature-list {
+  .feature-list,
+  .process-grid,
+  .faq-grid {
     grid-template-columns: 1fr;
   }
 

@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "Portfolio de Martin De Lucca - soluciones para negocios",
+  "description": "Portfolio de Martín De Lucca - soluciones para negocios",
   "private": true,
   "scripts": {
     "build:css": "tailwindcss -i src/input.css -o css/tailwind.css --minify",

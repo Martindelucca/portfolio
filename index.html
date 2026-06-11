@@ -10,14 +10,18 @@
   <meta property="og:description" content="Soluciones para negocios: sistemas de gestión, POS, landings profesionales y presencia online inicial.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://martindelucca.github.io/portfolio/">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://martindelucca.github.io/portfolio/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Martín De Lucca | Fullstack Developer">
   <meta name="twitter:description" content="Soluciones para negocios: sistemas de gestión, POS y landings.">
+  <meta name="twitter:image" content="https://martindelucca.github.io/portfolio/assets/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script>
-    (function(){var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}})();
+    (function(){var t;try{t=localStorage.getItem('theme')}catch(e){t=null}if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}})();
   </script>
   <link rel="stylesheet" href="css/tailwind.css">
   <link rel="stylesheet" href="css/style.css">
@@ -36,8 +40,10 @@
         <a href="#inicio" class="nav-link px-4 py-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">Inicio</a>
         <a href="#servicios" class="nav-link px-4 py-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">Servicios</a>
         <a href="#sobre-mi" class="nav-link px-4 py-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">Sobre Mí</a>
+        <a href="#como-trabajo" class="nav-link px-4 py-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">Proceso</a>
         <a href="#skills" class="nav-link px-4 py-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">Stack</a>
         <a href="#proyectos" class="nav-link px-4 py-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">POS</a>
+        <a href="#faq" class="nav-link px-4 py-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">FAQ</a>
         <a href="#contacto" class="nav-link px-4 py-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">Contacto</a>
       </div>
 
@@ -67,8 +73,10 @@
         <a href="#inicio" class="mobile-link px-3 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors">Inicio</a>
         <a href="#servicios" class="mobile-link px-3 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors">Servicios</a>
         <a href="#sobre-mi" class="mobile-link px-3 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors">Sobre Mí</a>
+        <a href="#como-trabajo" class="mobile-link px-3 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors">Proceso</a>
         <a href="#skills" class="mobile-link px-3 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors">Stack</a>
         <a href="#proyectos" class="mobile-link px-3 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors">POS</a>
+        <a href="#faq" class="mobile-link px-3 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors">FAQ</a>
         <a href="#contacto" class="mobile-link px-3 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors">Contacto</a>
       </div>
     </div>
@@ -125,7 +133,7 @@
           <div class="pos-toolbar">
             <div>
               <p class="font-mono text-xs uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">Sistema POS</p>
-              <h2 class="text-2xl font-bold tracking-tight">Ventas del dia</h2>
+              <h2 class="text-2xl font-bold tracking-tight">Ventas del día</h2>
             </div>
             <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-800 dark:bg-emerald-400/10 dark:text-emerald-300">Caja activa</span>
           </div>
@@ -137,16 +145,16 @@
               <small>47 comprobantes</small>
             </div>
             <div class="pos-tile col-span-2 sm:col-span-1">
-              <span class="tile-label">Stock critico</span>
+              <span class="tile-label">Stock crítico</span>
               <strong>12 items</strong>
               <small>reponer esta semana</small>
             </div>
           </div>
 
           <div class="sale-list">
-            <div class="sale-row"><span>Codigo</span><span>Producto</span><span>Total</span></div>
+            <div class="sale-row"><span>Código</span><span>Producto</span><span>Total</span></div>
             <div class="sale-row"><span>0048</span><span>Combo minorista</span><span>$18.400</span></div>
-            <div class="sale-row"><span>0172</span><span>Articulo contado</span><span>$7.950</span></div>
+            <div class="sale-row"><span>0172</span><span>Artículo contado</span><span>$7.950</span></div>
             <div class="sale-row"><span>0204</span><span>Venta mayorista</span><span>$43.280</span></div>
           </div>
         </div>
@@ -165,7 +173,7 @@
 
         <div class="services-grid">
           <article class="service-card service-card-large">
-            <span class="panel-label">Operacion diaria</span>
+            <span class="panel-label">Operación diaria</span>
             <h3>Sistemas de gestión / POS</h3>
             <p>Para comercios que necesitan controlar ventas, stock, caja, productos y reportes desde una herramienta hecha a medida.</p>
           </article>
@@ -194,7 +202,7 @@
 
         <div class="space-y-8">
           <p class="text-xl leading-relaxed text-zinc-600 dark:text-zinc-300">
-            Me enfoco en aplicaciones de negocio: interfaces claras, persistencia confiable y flujos pensados para uso diario. Mi fuerte esta en C#, .NET, Java, Spring Boot y SQL Server; el frontend lo uso como puente para crear landings y experiencias simples para clientes finales.
+            Me enfoco en aplicaciones de negocio: interfaces claras, persistencia confiable y flujos pensados para uso diario. Mi fuerte está en C#, .NET, Java, Spring Boot y SQL Server; el frontend lo uso como puente para crear landings y experiencias simples para clientes finales.
           </p>
 
           <div class="timeline space-y-8">
@@ -227,6 +235,38 @@
       </div>
     </section>
 
+    <section id="como-trabajo" class="section-block reveal">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-12 max-w-4xl">
+          <p class="section-kicker">Proceso</p>
+          <h2 class="section-title">Cómo trabajo con cada negocio.</h2>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-step">
+            <span class="process-num">01</span>
+            <h3>Escucho lo que necesitás</h3>
+            <p>Charlamos por WhatsApp o formulario. Entiendo tu negocio, qué te frena hoy y qué resultado esperás.</p>
+          </div>
+          <div class="process-step">
+            <span class="process-num">02</span>
+            <h3>Te propongo una solución concreta</h3>
+            <p>Te digo qué se puede hacer, con qué herramientas, en cuánto tiempo y qué necesito de tu lado para arrancar.</p>
+          </div>
+          <div class="process-step">
+            <span class="process-num">03</span>
+            <h3>Construyo y te muestro avances</h3>
+            <p>Trabajo con entregas parciales. Ves el sistema o la landing antes de que esté terminada para ajustar lo que haga falta.</p>
+          </div>
+          <div class="process-step">
+            <span class="process-num">04</span>
+            <h3>Entrego y te dejo funcionando</h3>
+            <p>Recibís todo listo: acceso, instrucciones simples y soporte inicial para que arranques sin depender de mí.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="skills" class="section-block bg-white dark:bg-zinc-900 reveal">
       <div class="max-w-7xl mx-auto">
         <div class="mb-12 max-w-3xl">
@@ -247,14 +287,14 @@
           <div class="skill-panel">
             <span class="panel-label">Landings</span>
             <h3>Web clara para vender</h3>
-            <p>HTML, CSS, JavaScript y Tailwind para crear paginas rapidas, modernas y conectadas a WhatsApp o formularios.</p>
+            <p>HTML, CSS, JavaScript y Tailwind para crear páginas rápidas, modernas y conectadas a WhatsApp o formularios.</p>
             <div class="tag-group">
               <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Tailwind</span>
             </div>
           </div>
 
           <div class="skill-panel accent-panel">
-            <span class="panel-label">Tambien</span>
+            <span class="panel-label">También</span>
             <h3>WPF y MVVM</h3>
             <p>Para aplicaciones de escritorio con interfaz cuidada, separación de responsabilidades y buen mantenimiento.</p>
           </div>
@@ -352,6 +392,42 @@ status: production-ready logic</code></pre>
           </button>
           <p id="form-status" class="text-sm text-center hidden"></p>
         </form>
+      </div>
+    </section>
+
+    <section id="faq" class="section-block reveal">
+      <div class="max-w-4xl mx-auto">
+        <div class="mb-12">
+          <p class="section-kicker">Preguntas frecuentes</p>
+          <h2 class="section-title">Lo que suelen preguntarme.</h2>
+        </div>
+
+        <div class="faq-grid">
+          <details class="faq-item">
+            <summary>¿Cuánto tarda un sistema de gestión o POS?</summary>
+            <p>Depende de lo que necesites. Un sistema básico de ventas y stock puede estar funcionando en 3 a 5 semanas. Si necesitás reportes avanzados, integración con algo que ya usás o módulos extra, puede extenderse un poco más. Siempre te doy un plazo estimado antes de arrancar.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Cuánto cuesta una landing o un sistema?</summary>
+            <p>Cada proyecto es distinto. Después de escucharte te paso un presupuesto fijo por lo acordado, sin costos ocultos. Si preferís, podemos dividir el pago en etapas atadas a cada entrega parcial.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Yo necesito saber algo técnico?</summary>
+            <p>No. Mi trabajo es traducir lo que necesitás en algo que funcione. Solo necesito que me cuentes cómo trabaja tu negocio hoy y qué te gustaría mejorar.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Qué pasa después de la entrega?</summary>
+            <p>Te dejo todo funcionando con instrucciones claras. Si más adelante necesitás cambios, agregar módulos o actualizar algo, podemos coordinarlo sin problema.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Hacés mantenimiento mensual?</summary>
+            <p>No ofrezco mantenimiento mensual como servicio fijo, pero si surge algo puedo ayudarte por consulta puntual. Para presencia online, la puesta en marcha inicial incluye dejarte todo listo para que sigas por tu cuenta.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Trabajás solo con comercios grandes?</summary>
+            <p>No. Trabajo con negocios de cualquier tamaño: comercios chicos, emprendimientos, profesionales independientes y empresas que necesitan ordenar sus procesos.</p>
+          </details>
+        </div>
       </div>
     </section>
   </main>

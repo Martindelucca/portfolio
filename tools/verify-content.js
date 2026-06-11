@@ -15,14 +15,30 @@ const requiredSnippets = [
   '<span>C#</span><span>.NET</span><span>Java</span><span>Spring Boot</span><span>SQL Server</span>',
   'Quiero una landing',
   'Necesito un sistema',
-  'Quiero mejorar mi presencia online'
+  'Quiero mejorar mi presencia online',
+  'id="como-trabajo"',
+  'id="faq"',
+  'Cómo trabajo con cada negocio',
+  'Lo que suelen preguntarme'
 ];
 
 const forbiddenSnippets = [
   'https://formspree.io/f/TU_FORM_ID',
   'C#, Java, SQL Server, MongoDB',
   '<span>MongoDB</span>',
-  'Software de gestion que trabaja como tu negocio.'
+  'Software de gestion que trabaja como tu negocio.',
+  'Stock critico',
+  'Ventas del dia',
+  'sistemas de gestion',
+  'mas profesional',
+  'una pagina',
+  'tecnico<',
+  'logica de negocio',
+  'separacion de responsabilidades',
+  'informacion',
+  'opcion<',
+  'queres construir',
+  'que necesitas'
 ];
 
 const missing = requiredSnippets.filter((snippet) => !html.includes(snippet));
