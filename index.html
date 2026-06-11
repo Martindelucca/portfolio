@@ -36,7 +36,7 @@
         <span class="hidden sm:block text-sm text-zinc-700 dark:text-zinc-300 group-hover:text-cyan-700 dark:group-hover:text-cyan-300 transition-colors">Martín De Lucca</span>
       </a>
 
-      <div class="hidden md:flex items-center gap-1 rounded-full border border-zinc-200/70 bg-white/70 p-1 text-sm font-medium backdrop-blur dark:border-zinc-800 dark:bg-zinc-900/70">
+      <div class="hidden lg:flex items-center gap-1 rounded-full border border-zinc-200/70 bg-white/70 p-1 text-sm font-medium backdrop-blur dark:border-zinc-800 dark:bg-zinc-900/70">
         <a href="#inicio" class="nav-link px-4 py-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">Inicio</a>
         <a href="#servicios" class="nav-link px-4 py-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">Servicios</a>
         <a href="#ejemplos" class="nav-link px-4 py-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">Ejemplos</a>
@@ -56,7 +56,7 @@
           </svg>
         </button>
 
-        <button id="menu-toggle" class="tactile md:hidden grid h-10 w-10 place-items-center rounded-full border border-zinc-200 bg-white/80 backdrop-blur dark:border-zinc-800 dark:bg-zinc-900/80" aria-label="Menú de navegación" aria-controls="mobile-menu" aria-expanded="false">
+        <button id="menu-toggle" class="tactile lg:hidden grid h-10 w-10 place-items-center rounded-full border border-zinc-200 bg-white/80 backdrop-blur dark:border-zinc-800 dark:bg-zinc-900/80" aria-label="Menú de navegación" aria-controls="mobile-menu" aria-expanded="false">
           <svg id="menu-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
@@ -67,7 +67,7 @@
       </div>
     </nav>
 
-    <div id="mobile-menu" class="md:hidden hidden border-t border-zinc-200 bg-white/95 backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/95">
+    <div id="mobile-menu" class="lg:hidden hidden border-t border-zinc-200 bg-white/95 backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/95">
       <div class="px-5 py-4 flex flex-col gap-2 text-sm font-medium">
         <a href="#inicio" class="mobile-link px-3 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors">Inicio</a>
         <a href="#servicios" class="mobile-link px-3 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors">Servicios</a>
@@ -221,6 +221,7 @@
             <a href="https://wa.me/5493524401654?text=Hola%20Mart%C3%ADn%2C%20quiero%20consultar%20por%20un%20sistema%20de%20ventas%2C%20stock%20o%20caja%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer" class="service-cta">Consultar por sistema</a>
           </article>
         </div>
+        <p class="service-budget-note text-center mt-8 text-zinc-500 dark:text-zinc-400">Presupuesto cerrado según alcance. En proyectos más grandes, el trabajo puede dividirse por etapas.</p>
       </div>
     </section>
 
@@ -242,6 +243,12 @@
             <h3>Demo POS para comercio</h3>
             <p class="example-problem"><strong>Problema:</strong> Cuando las ventas, el stock y la caja se manejan en planillas o cuadernos, aparecen errores, pérdida de tiempo y poca visibilidad del negocio.</p>
             <p class="example-solution"><strong>Solución:</strong> Sistema de escritorio pensado para registrar ventas, controlar productos, revisar caja y consultar reportes básicos.</p>
+            <div class="mockup-panel mini-dashboard" aria-hidden="true">
+              <div class="mockup-grid">
+                <span>Ventas</span><span>Stock</span>
+                <span>Caja</span><span>Reportes</span>
+              </div>
+            </div>
             <div class="example-modules">
               <span>Ventas</span><span>Productos</span><span>Stock</span><span>Caja</span><span>Reportes</span>
             </div>
@@ -258,6 +265,13 @@
             <h3>Landing para negocio local</h3>
             <p class="example-problem"><strong>Problema:</strong> Muchos negocios tienen redes sociales, pero no una página clara donde explicar su propuesta, mostrar servicios y enviar consultas a WhatsApp.</p>
             <p class="example-solution"><strong>Solución:</strong> Landing responsive con hero, beneficios, servicios, preguntas frecuentes y CTA directo.</p>
+            <div class="mockup-panel landing-preview" aria-hidden="true">
+              <div class="mockup-line mockup-line-lg"></div>
+              <div class="mockup-line"></div>
+              <div class="mockup-chips">
+                <span>Hero</span><span>Servicios</span><span>WhatsApp</span>
+              </div>
+            </div>
             <div class="example-modules">
               <span>Responsive</span><span>WhatsApp CTA</span><span>SEO básico</span><span>Carga rápida</span>
             </div>
@@ -273,6 +287,18 @@
             <h3>Orden digital inicial</h3>
             <p class="example-problem"><strong>Problema:</strong> Perfiles con bio confusa, sin link directo, destacados mezclados y poca claridad para convertir visitas en consultas.</p>
             <p class="example-solution"><strong>Solución:</strong> Revisión y ordenamiento del perfil para que el negocio comunique mejor y reciba más consultas.</p>
+            <div class="mockup-panel before-after-preview" aria-hidden="true">
+              <div>
+                <span class="ba-label">Antes</span>
+                <div class="mockup-line"></div>
+                <div class="mockup-line short"></div>
+              </div>
+              <div>
+                <span class="ba-label">Después</span>
+                <div class="mockup-line"></div>
+                <div class="mockup-chip">WhatsApp claro</div>
+              </div>
+            </div>
             <div class="before-after-grid">
               <div>
                 <span class="ba-label">Antes</span>
@@ -502,7 +528,7 @@
             </div>
             <div class="form-block">
               <label for="whatsapp">WhatsApp</label>
-              <input type="tel" id="whatsapp" name="whatsapp" placeholder="Tu número con código de área">
+              <input type="tel" id="whatsapp" name="whatsapp" required placeholder="Tu número con código de área">
             </div>
             <div class="form-block">
               <label for="email">Email</label>
@@ -524,7 +550,7 @@
 
   <footer class="px-5 md:px-8 py-8 border-t border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-zinc-500 dark:text-zinc-400">
-      <p>&copy; <span id="current-year"></span> Martín De Lucca. Portfolio personal.</p>
+      <p>&copy; <span id="current-year"></span> Martín De Lucca. Soluciones digitales para negocios locales.</p>
       <div class="flex gap-4">
         <a href="https://www.linkedin.com/in/martin-de-lucca-066b84323" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors">LinkedIn</a>
         <a href="https://github.com/Martindelucca" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors">GitHub</a>
