@@ -1,5 +1,11 @@
 # Portfolio Web - Implementation Plan
 
+> **⚠️ HISTÓRICO - SUPERADO**
+> Este plan de implementación fue ejecutado para la versión inicial del portfolio.
+> El sitio actual difiere significativamente: usa Tailwind CLI (no CDN),
+> tiene estructura de servicios orientada a negocios locales, y JS refactorizado.
+> No re-ejecutar este plan sobre el código actual.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Build a single-page portfolio website with HTML, Tailwind CDN, and vanilla JS.

@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio de Martin De Lucca - soluciones para negocios",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i src/input.css -o css/tailwind.css --minify",
+    "watch:css": "tailwindcss -i src/input.css -o css/tailwind.css --watch",
+    "test": "node tools/verify-content.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Martindelucca/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Martindelucca/portfolio/issues"
+  },
+  "homepage": "https://github.com/Martindelucca/portfolio#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.0",
+    "tailwindcss": "^4.3.0"
+  }
+}

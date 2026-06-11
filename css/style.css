@@ -1,3 +1,7 @@
+html {
+  scroll-padding-top: 5rem;
+}
+
 /* --- Base material --- */
 .noise-layer {
   opacity: 0.35;
@@ -221,13 +225,14 @@
   margin-bottom: 1rem;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.75rem;
+  font-weight: 700;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: #0891b2;
+  color: #0e7490;
 }
 
 .dark .section-kicker {
-  color: #67e8f9;
+  color: #22d3ee;
 }
 
 .section-title {
@@ -246,6 +251,43 @@
 /* --- Timeline --- */
 .timeline {
   position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #06b6d4;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #06b6d4;
+  border: 2px solid #fafafa;
+}
+
+.dark .timeline-item::before {
+  border-color: #09090b;
+}
+
+@media (min-width: 768px) {
+  .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .timeline-item::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 /* --- Services --- */
@@ -293,43 +335,6 @@
 
 .dark .service-card p {
   color: #d4d4d8;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: #06b6d4;
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -4px;
-  top: 8px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #06b6d4;
-  border: 2px solid #fafafa;
-}
-
-.dark .timeline-item::before {
-  border-color: #09090b;
-}
-
-@media (min-width: 768px) {
-  .timeline::before {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .timeline-item::before {
-    left: 50%;
-    transform: translateX(-50%);
-  }
 }
 
 /* --- Skills --- */
@@ -569,15 +574,36 @@
 }
 
 /* --- Scroll reveal --- */
-.reveal {
+.js-enabled .reveal {
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.reveal.visible {
+.js-enabled .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-orb,
+  .status-dot {
+    animation: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 @keyframes float {

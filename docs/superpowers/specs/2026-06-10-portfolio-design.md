@@ -1,5 +1,11 @@
 # Portfolio Web - Design Spec
 
+> **⚠️ HISTÓRICO - SUPERADO**
+> Este spec fue escrito para la versión inicial del portfolio (2026-06-10).
+> El sitio actual usa Tailwind CLI (no CDN), tiene sección de Servicios,
+> enfoque comercial para negocios locales, y cambios de copy/structure posteriores.
+> Usar solo como referencia histórica, no como spec activa para implementación.
+
 ## Resumen
 
 Portfolio personal single-page para mostrar trabajo como desarrollador Fullstack, captar clientes y servir de carta de presentación profesional.
