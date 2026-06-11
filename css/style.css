@@ -636,126 +636,21 @@ html {
   background: rgba(24, 24, 27, 0.65);
 }
 
-.process-num {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #0e7490;
-  margin-bottom: 1.25rem;
-  display: block;
-}
-
-.dark .process-num {
-  color: #22d3ee;
-}
-
-.process-step h3 {
-  font-size: clamp(1.1rem, 1.4vw, 1.5rem);
-  font-weight: 800;
-  margin-bottom: 0.75rem;
-  letter-spacing: -0.025em;
-  line-height: 1.15;
-}
-
-.process-step p {
-  color: #52525b;
-  font-size: 0.92rem;
-  line-height: 1.65;
-}
-
-.dark .process-step p {
-  color: #a1a1aa;
-}
-
-/* --- FAQ --- */
-.faq-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-
-.faq-item {
-  border: 1px solid rgba(212, 212, 216, 0.7);
-  border-radius: 1.5rem;
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(10px);
-  overflow: hidden;
-}
-
-.dark .faq-item {
-  border-color: rgba(63, 63, 70, 0.8);
-  background: rgba(24, 24, 27, 0.6);
-}
-
-.faq-item summary {
-  padding: 1.25rem 1.5rem;
-  font-weight: 700;
-  font-size: 0.95rem;
-  cursor: pointer;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.faq-item summary::-webkit-details-marker {
-  display: none;
-}
-
-.faq-item summary::after {
-  content: '+';
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #0e7490;
-  transition: transform 0.25s ease;
-}
-
-.dark .faq-item summary::after {
-  color: #22d3ee;
-}
-
-.faq-item[open] summary::after {
-  content: '−';
-  transform: rotate(0deg);
-}
-
-.faq-item p {
-  padding: 0 1.5rem 1.25rem;
-  color: #52525b;
-  font-size: 0.9rem;
-  line-height: 1.7;
-}
-
-.dark .faq-item p {
-  color: #a1a1aa;
-}
-
-/* --- Focus-visible --- */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible,
-summary:focus-visible {
-  outline: 3px solid rgba(6, 182, 212, 0.55);
-  outline-offset: 3px;
-}
-
-/* --- Service CTAs and bullets --- */
+/* --- Service CTAs enhanced --- */
 .service-cta {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  width: fit-content;
   margin-top: 1.25rem;
-  padding: 0.65rem 1.1rem;
   border-radius: 999px;
-  background: #16a34a;
-  color: white;
-  font-size: 0.82rem;
+  padding: 0.75rem 1.1rem;
+  background: #18181b;
+  color: #ffffff;
+  font-size: 0.85rem;
   font-weight: 700;
   text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .service-cta::before {
@@ -772,7 +667,7 @@ summary:focus-visible {
 }
 
 .service-cta:hover {
-  background: #15803d;
+  background: #0e7490;
   transform: translateY(-1px);
 }
 
@@ -780,6 +675,16 @@ summary:focus-visible {
   transform: scale(0.98);
 }
 
+.dark .service-cta {
+  background: #fafafa;
+  color: #18181b;
+}
+
+.dark .service-cta:hover {
+  background: #a5f3fc;
+}
+
+/* Remove overrides below — service-cta is now single definition */
 .feature-bullets {
   margin-top: 1rem;
   padding: 0;
@@ -920,6 +825,98 @@ summary:focus-visible {
 
 .example-status {
   margin-top: 0.75rem;
+}
+
+/* --- Example mockups --- */
+.mockup-panel {
+  border: 1px solid #e4e4e7;
+  border-radius: 1.25rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  background: #fafafa;
+}
+
+.dark .mockup-panel {
+  border-color: #27272a;
+  background: #18181b;
+}
+
+.mini-dashboard .mockup-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.mini-dashboard .mockup-grid span {
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: white;
+  border: 1px solid #e4e4e7;
+  text-align: center;
+  color: #3f3f46;
+}
+
+.dark .mini-dashboard .mockup-grid span {
+  background: #3f3f46;
+  border-color: #52525b;
+  color: #d4d4d8;
+}
+
+.mockup-line {
+  height: 0.55rem;
+  border-radius: 999px;
+  background: #d4d4d8;
+  margin-bottom: 0.5rem;
+}
+
+.dark .mockup-line {
+  background: #3f3f46;
+}
+
+.mockup-line-lg {
+  height: 1rem;
+  width: 70%;
+}
+
+.mockup-line.short {
+  width: 50%;
+}
+
+.mockup-chips {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.mockup-chips span,
+.mockup-chip {
+  border: 1px solid #d4d4d8;
+  border-radius: 999px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #3f3f46;
+}
+
+.dark .mockup-chips span,
+.dark .mockup-chip {
+  border-color: #3f3f46;
+  color: #d4d4d8;
+}
+
+.before-after-preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+/* --- Budget note --- */
+.service-budget-note {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .before-after-grid {

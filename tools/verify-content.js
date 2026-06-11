@@ -23,8 +23,16 @@ const requiredSnippets = [
   'id="como-trabajo"',
   'id="faq"',
   'id="sobre-mi"',
-  'assets/og-image.png'
+  'assets/og-image.png',
+  'Presupuesto cerrado según alcance',
+  'Soluciones digitales para negocios locales'
 ];
+
+var whatsappOk =
+  html.includes('id="whatsapp"') &&
+  html.includes('name="whatsapp"') &&
+  html.includes('required') &&
+  html.includes('Tu número con código de área');
 
 const forbiddenSnippets = [
   'https://formspree.io/f/TU_FORM_ID',
@@ -39,21 +47,34 @@ const forbiddenSnippets = [
   'una pagina',
   'logica de negocio',
   'separacion de responsabilidades',
-  'Tambien'
+  'Tambien',
+  'Portfolio personal.'
 ];
 
-const missing = requiredSnippets.filter((snippet) => !html.includes(snippet));
-const forbidden = forbiddenSnippets.filter((snippet) => html.includes(snippet));
+var missing = requiredSnippets.filter(function (snippet) { return !html.includes(snippet); });
+var forbidden = forbiddenSnippets.filter(function (snippet) { return html.includes(snippet); });
 
-// Check for duplicate homepage in package.json
-var dupMsg = '';
-var pkg = fs.readFileSync(path.join(__dirname, '..', 'package.json'), 'utf8');
-var homepageMatches = pkg.match(/"homepage"/g);
-if (homepageMatches && homepageMatches.length > 1) {
-  dupMsg = 'Duplicate "homepage" key in package.json (' + homepageMatches.length + ' occurrences)';
+var errors = [];
+
+// Package.json validations
+var pkgRaw = fs.readFileSync(path.join(__dirname, '..', 'package.json'), 'utf8');
+var pkg = JSON.parse(pkgRaw);
+var homepageMatches = pkgRaw.match(/"homepage"\s*:/g) || [];
+
+if (homepageMatches.length !== 1) {
+  errors.push('package.json must contain exactly one homepage field (found ' + homepageMatches.length + ')');
+}
+if (pkg.author !== 'Martín De Lucca') {
+  errors.push('package.json author must be "Martín De Lucca"');
+}
+if (pkg.homepage !== 'https://martindelucca.github.io/portfolio/') {
+  errors.push('package.json homepage must be "https://martindelucca.github.io/portfolio/"');
+}
+if (!Array.isArray(pkg.keywords) || pkg.keywords.length === 0) {
+  errors.push('package.json keywords must be a non-empty array');
 }
 
-if (missing.length || forbidden.length || dupMsg) {
+if (missing.length || forbidden.length || !whatsappOk || errors.length) {
   console.error('Content verification failed.');
   if (missing.length) {
     console.error('Missing snippets:');
@@ -63,8 +84,11 @@ if (missing.length || forbidden.length || dupMsg) {
     console.error('Forbidden snippets still present:');
     forbidden.forEach(function (snippet) { console.error('- ' + snippet); });
   }
-  if (dupMsg) {
-    console.error(dupMsg);
+  if (!whatsappOk) {
+    console.error('WhatsApp field must be required with the correct placeholder.');
+  }
+  if (errors.length) {
+    errors.forEach(function (e) { console.error(e); });
   }
   process.exit(1);
 }
