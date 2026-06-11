@@ -866,6 +866,44 @@ html {
   color: #a5f3fc;
 }
 
+.example-secondary-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-top: 1.25rem;
+  border: 1px solid #d4d4d8;
+  border-radius: 999px;
+  padding: 0.75rem 1.1rem;
+  background: rgba(255, 255, 255, 0.72);
+  color: #18181b;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.example-secondary-cta:hover {
+  border-color: #0e7490;
+  color: #0e7490;
+  transform: translateY(-1px);
+}
+
+.example-secondary-cta:active {
+  transform: scale(0.98);
+}
+
+.dark .example-secondary-cta {
+  border-color: #3f3f46;
+  background: rgba(39, 39, 42, 0.72);
+  color: #fafafa;
+}
+
+.dark .example-secondary-cta:hover {
+  border-color: #67e8f9;
+  color: #67e8f9;
+}
+
 .example-problem,
 .example-solution {
   font-size: 0.88rem;
