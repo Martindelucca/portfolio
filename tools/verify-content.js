@@ -5,21 +5,21 @@ const html = fs.readFileSync(path.join(__dirname, '..', 'index.html'), 'utf8');
 
 const requiredSnippets = [
   'https://formspree.io/f/xzdqaevb',
-  'Landings y sistemas simples para negocios',
+  'Páginas web y sistemas simples para negocios que quieren vender mejor',
   'Consultar por WhatsApp',
   'id="servicios"',
   'id="ejemplos"',
-  'Landing profesional para recibir consultas por WhatsApp',
-  'Instagram + WhatsApp listo para vender',
-  'Sistema simple para ventas, stock y caja',
-  'Demo POS para comercio',
-  'Demo funcional con lógica preparada',
+  'Landing para recibir consultas',
+  'Instagram y WhatsApp más claros',
+  'Sistema de ventas, stock y caja',
+  'assets/landing-sinbrujula.png',
+  'assets/sistemadeventas.png',
+  'https://sinbrujulaviajes.com.ar/',
   'Contame qué necesita tu negocio',
-  'No reemplaza un ERP complejo',
   'Quiero una landing',
   'Necesito un sistema de ventas / stock',
   'No estoy seguro, quiero orientación',
-  '<span>C#</span><span>.NET</span><span>Java</span><span>Spring Boot</span><span>SQL Server</span>',
+  'Trabajo con HTML, CSS, JavaScript, Tailwind, C#, .NET, Java y SQL Server',
   'id="como-trabajo"',
   'id="faq"',
   'id="sobre-mi"',
@@ -48,7 +48,12 @@ const forbiddenSnippets = [
   'logica de negocio',
   'separacion de responsabilidades',
   'Tambien',
-  'Portfolio personal.'
+  'Portfolio personal.',
+  'Demo POS para comercio',
+  'Demo funcional con lógica preparada',
+  'Sistema simple para ventas, stock y caja',
+  'Instagram + WhatsApp listo para vender',
+  'No reemplaza un ERP complejo'
 ];
 
 var missing = requiredSnippets.filter(function (snippet) { return !html.includes(snippet); });

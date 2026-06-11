@@ -293,8 +293,8 @@ html {
 /* --- Services --- */
 .services-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
 }
 
 .service-card {
@@ -304,6 +304,8 @@ html {
   background: rgba(255, 255, 255, 0.76);
   box-shadow: 0 30px 70px -45px rgba(24, 24, 27, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
 }
 
 .dark .service-card {
@@ -322,8 +324,8 @@ html {
 
 .service-card h3 {
   margin: 0.65rem 0 0.75rem;
-  font-size: clamp(1.65rem, 3vw, 3rem);
-  line-height: 0.98;
+  font-size: clamp(1.55rem, 2.2vw, 2.35rem);
+  line-height: 1;
   letter-spacing: -0.045em;
   font-weight: 800;
 }
@@ -335,6 +337,10 @@ html {
 
 .dark .service-card p {
   color: #d4d4d8;
+}
+
+.service-card .service-cta {
+  margin-top: auto;
 }
 
 /* --- Skills --- */
@@ -687,10 +693,11 @@ html {
 /* Remove overrides below — service-cta is now single definition */
 .feature-bullets {
   margin-top: 1rem;
+  margin-bottom: 1.25rem;
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 0.45rem;
 }
 
@@ -749,18 +756,19 @@ html {
 /* --- Examples / Demos --- */
 .examples-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
 }
 
 .example-card {
   border: 1px solid rgba(212, 212, 216, 0.75);
   border-radius: 2rem;
-  padding: 2rem;
+  padding: 1rem;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(12px);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .dark .example-card {
@@ -789,12 +797,115 @@ html {
   margin-bottom: 1rem;
 }
 
+.example-card p {
+  color: #52525b;
+  line-height: 1.65;
+}
+
+.dark .example-card p {
+  color: #a1a1aa;
+}
+
+.example-shot {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #e4e4e7;
+  border-radius: 1.35rem;
+  background: #f4f4f5;
+  aspect-ratio: 16 / 9;
+}
+
+.dark .example-shot {
+  border-color: #27272a;
+  background: #18181b;
+}
+
+.example-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.example-shot:hover img {
+  transform: scale(1.025);
+}
+
+.example-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.35rem 0.75rem 0.75rem;
+}
+
+.example-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.example-text-link {
+  margin-top: 1.25rem;
+  color: #0e7490;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.example-text-link:hover {
+  color: #155e75;
+}
+
+.dark .example-text-link {
+  color: #67e8f9;
+}
+
+.dark .example-text-link:hover {
+  color: #a5f3fc;
+}
+
 .example-problem,
 .example-solution {
   font-size: 0.88rem;
   line-height: 1.65;
   color: #52525b;
   margin-bottom: 0.65rem;
+}
+
+/* --- FAQ --- */
+.faq-grid {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.faq-item {
+  border: 1px solid rgba(212, 212, 216, 0.78);
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.72);
+  padding: 1rem 1.15rem;
+}
+
+.dark .faq-item {
+  border-color: rgba(63, 63, 70, 0.9);
+  background: rgba(24, 24, 27, 0.68);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.faq-item p {
+  margin-top: 0.75rem;
+  color: #52525b;
+  line-height: 1.7;
+}
+
+.dark .faq-item p {
+  color: #a1a1aa;
 }
 
 .dark .example-problem,
