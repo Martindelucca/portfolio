@@ -12,9 +12,15 @@
     "type": "git",
     "url": "git+https://github.com/Martindelucca/portfolio.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "portfolio",
+    "landing-page",
+    "pos",
+    "sistemas-de-gestion",
+    "negocios-locales"
+  ],
+  "author": "Martín De Lucca",
+  "homepage": "https://martindelucca.github.io/portfolio/",
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/Martindelucca/portfolio/issues"

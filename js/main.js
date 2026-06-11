@@ -43,15 +43,49 @@
       });
     }
 
+    function closeMenu() {
+      if (mobileMenu) mobileMenu.classList.add('hidden');
+      if (menuOpen) menuOpen.classList.remove('hidden');
+      if (menuClose) menuClose.classList.add('hidden');
+      if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    function openMenu() {
+      if (mobileMenu) mobileMenu.classList.remove('hidden');
+      if (menuOpen) menuOpen.classList.add('hidden');
+      if (menuClose) menuClose.classList.remove('hidden');
+      if (menuToggle) menuToggle.setAttribute('aria-expanded', 'true');
+    }
+
+    function isMenuOpen() {
+      return mobileMenu && !mobileMenu.classList.contains('hidden');
+    }
+
     if (menuToggle && mobileMenu && menuOpen && menuClose) {
       menuToggle.addEventListener('click', function () {
-        var expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-        menuToggle.setAttribute('aria-expanded', !expanded);
-        mobileMenu.classList.toggle('hidden');
-        menuOpen.classList.toggle('hidden');
-        menuClose.classList.toggle('hidden');
+        if (isMenuOpen()) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
       });
     }
+
+    // Close menu with Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && isMenuOpen()) {
+        closeMenu();
+        if (menuToggle) menuToggle.focus();
+      }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function (e) {
+      if (!isMenuOpen()) return;
+      if (menuToggle && menuToggle.contains(e.target)) return;
+      if (mobileMenu && mobileMenu.contains(e.target)) return;
+      closeMenu();
+    });
 
     // Smooth scroll + close mobile menu
     document.querySelectorAll('.nav-link, .mobile-link').forEach(function (link) {
@@ -61,12 +95,7 @@
         if (target) {
           target.scrollIntoView({ behavior: 'smooth' });
         }
-        if (mobileMenu) {
-          mobileMenu.classList.add('hidden');
-        }
-        if (menuOpen) menuOpen.classList.remove('hidden');
-        if (menuClose) menuClose.classList.add('hidden');
-        if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+        closeMenu();
       });
     });
   }

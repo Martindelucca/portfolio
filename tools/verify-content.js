@@ -5,40 +5,40 @@ const html = fs.readFileSync(path.join(__dirname, '..', 'index.html'), 'utf8');
 
 const requiredSnippets = [
   'https://formspree.io/f/xzdqaevb',
-  'Ayudo a negocios a ordenar ventas, stock y presencia online.',
+  'Landings y sistemas simples para negocios',
+  'Consultar por WhatsApp',
   'id="servicios"',
-  'Sistemas de gestión / POS',
-  'Landing profesional',
-  'Presencia online inicial',
-  'Para el negocio',
-  'Para quien quiera mirar lo técnico',
-  '<span>C#</span><span>.NET</span><span>Java</span><span>Spring Boot</span><span>SQL Server</span>',
+  'id="ejemplos"',
+  'Landing profesional para recibir consultas por WhatsApp',
+  'Instagram + WhatsApp listo para vender',
+  'Sistema simple para ventas, stock y caja',
+  'Demo POS para comercio',
+  'Demo funcional con lógica preparada',
+  'Contame qué necesita tu negocio',
+  'No reemplaza un ERP complejo',
   'Quiero una landing',
-  'Necesito un sistema',
-  'Quiero mejorar mi presencia online',
+  'Necesito un sistema de ventas / stock',
+  'No estoy seguro, quiero orientación',
+  '<span>C#</span><span>.NET</span><span>Java</span><span>Spring Boot</span><span>SQL Server</span>',
   'id="como-trabajo"',
   'id="faq"',
-  'Cómo trabajo con cada negocio',
-  'Lo que suelen preguntarme'
+  'id="sobre-mi"'
 ];
 
 const forbiddenSnippets = [
   'https://formspree.io/f/TU_FORM_ID',
   'C#, Java, SQL Server, MongoDB',
   '<span>MongoDB</span>',
-  'Software de gestion que trabaja como tu negocio.',
+  'production-ready',
+  'production-ready logic',
   'Stock critico',
   'Ventas del dia',
   'sistemas de gestion',
   'mas profesional',
   'una pagina',
-  'tecnico<',
   'logica de negocio',
   'separacion de responsabilidades',
-  'informacion',
-  'opcion<',
-  'queres construir',
-  'que necesitas'
+  'Tambien'
 ];
 
 const missing = requiredSnippets.filter((snippet) => !html.includes(snippet));
