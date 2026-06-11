@@ -22,7 +22,8 @@ const requiredSnippets = [
   '<span>C#</span><span>.NET</span><span>Java</span><span>Spring Boot</span><span>SQL Server</span>',
   'id="como-trabajo"',
   'id="faq"',
-  'id="sobre-mi"'
+  'id="sobre-mi"',
+  'assets/og-image.png'
 ];
 
 const forbiddenSnippets = [
@@ -44,15 +45,26 @@ const forbiddenSnippets = [
 const missing = requiredSnippets.filter((snippet) => !html.includes(snippet));
 const forbidden = forbiddenSnippets.filter((snippet) => html.includes(snippet));
 
-if (missing.length || forbidden.length) {
+// Check for duplicate homepage in package.json
+var dupMsg = '';
+var pkg = fs.readFileSync(path.join(__dirname, '..', 'package.json'), 'utf8');
+var homepageMatches = pkg.match(/"homepage"/g);
+if (homepageMatches && homepageMatches.length > 1) {
+  dupMsg = 'Duplicate "homepage" key in package.json (' + homepageMatches.length + ' occurrences)';
+}
+
+if (missing.length || forbidden.length || dupMsg) {
   console.error('Content verification failed.');
   if (missing.length) {
     console.error('Missing snippets:');
-    missing.forEach((snippet) => console.error(`- ${snippet}`));
+    missing.forEach(function (snippet) { console.error('- ' + snippet); });
   }
   if (forbidden.length) {
     console.error('Forbidden snippets still present:');
-    forbidden.forEach((snippet) => console.error(`- ${snippet}`));
+    forbidden.forEach(function (snippet) { console.error('- ' + snippet); });
+  }
+  if (dupMsg) {
+    console.error(dupMsg);
   }
   process.exit(1);
 }

@@ -25,7 +25,6 @@
   "bugs": {
     "url": "https://github.com/Martindelucca/portfolio/issues"
   },
-  "homepage": "https://github.com/Martindelucca/portfolio#readme",
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.0",
     "tailwindcss": "^4.3.0"
