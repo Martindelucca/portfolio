@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="css/tailwind.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-zinc-50 text-zinc-950 antialiased dark:bg-zinc-950 dark:text-zinc-50 transition-colors duration-300">
+<body class="bg-stone-50 text-zinc-950 antialiased dark:bg-zinc-950 dark:text-zinc-50 transition-colors duration-300">
   <div class="fixed inset-0 pointer-events-none noise-layer" aria-hidden="true"></div>
 
   <header id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
@@ -84,16 +84,16 @@
       <div class="hero-orb hero-orb-a" aria-hidden="true"></div>
       <div class="hero-orb hero-orb-b" aria-hidden="true"></div>
 
-      <div class="max-w-7xl mx-auto grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center min-h-[calc(100dvh-11rem)]">
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-center min-h-[calc(100dvh-11rem)]">
         <div class="space-y-8">
-          <div class="inline-flex items-center gap-3 rounded-full border border-cyan-500/20 bg-cyan-50 px-4 py-2 text-sm font-medium text-cyan-800 dark:border-cyan-400/20 dark:bg-cyan-400/10 dark:text-cyan-200">
+          <div class="inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-50 px-4 py-1.5 text-sm font-medium text-cyan-800 dark:border-cyan-400/20 dark:bg-cyan-400/10 dark:text-cyan-200">
             <span class="status-dot"></span>
             Soluciones digitales para negocios locales
           </div>
 
           <div class="space-y-5">
-            <p class="font-mono text-xs uppercase tracking-[0.35em] text-zinc-500 dark:text-zinc-400">Webs · sistemas · presencia online</p>
-            <h1 class="max-w-4xl text-4xl font-extrabold tracking-tighter leading-[0.98] md:text-5xl lg:text-6xl">
+            <p class="font-mono text-xs uppercase tracking-[0.3em] text-zinc-500 dark:text-zinc-400">Páginas web &middot; sistemas de gestión</p>
+            <h1 class="max-w-4xl text-4xl font-extrabold tracking-tighter leading-[0.95] md:text-5xl lg:text-6xl">
               Páginas web y sistemas simples para negocios que quieren vender mejor.
             </h1>
             <p class="max-w-[62ch] text-lg leading-relaxed text-zinc-600 dark:text-zinc-300">
@@ -106,59 +106,40 @@
               <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               Consultar por WhatsApp
             </a>
-            <a href="#ejemplos" class="tactile inline-flex items-center justify-center rounded-full border border-zinc-300 bg-white/70 px-6 py-3 text-sm font-semibold text-zinc-900 backdrop-blur hover:border-cyan-500 hover:text-cyan-800 dark:border-zinc-700 dark:bg-zinc-900/70 dark:text-zinc-100 dark:hover:border-cyan-400 dark:hover:text-cyan-200 transition-colors">
-              Ver ejemplos
+            <a href="#servicios" class="tactile inline-flex items-center justify-center rounded-full border border-zinc-300 bg-white/70 px-6 py-3 text-sm font-semibold text-zinc-900 backdrop-blur hover:border-cyan-500 hover:text-cyan-800 dark:border-zinc-700 dark:bg-zinc-900/70 dark:text-zinc-100 dark:hover:border-cyan-400 dark:hover:text-cyan-200 transition-colors">
+              Ver servicios
             </a>
-          </div>
-
-          <div class="grid grid-cols-2 gap-3 max-w-md pt-4">
-            <div class="metric-chip">
-              <span class="metric-value">Web</span>
-              <span class="metric-label">más consultas</span>
-            </div>
-            <div class="metric-chip">
-              <span class="metric-value">Sistema</span>
-              <span class="metric-label">menos desorden</span>
-            </div>
           </div>
         </div>
 
-        <div class="pos-shell reveal visible">
-          <div class="pos-toolbar">
-            <div>
-              <p class="font-mono text-xs uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">Sistema de ventas</p>
-              <h2 class="text-2xl font-bold tracking-tight">Ventas del día</h2>
-            </div>
-            <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-800 dark:bg-emerald-400/10 dark:text-emerald-300">Adaptable</span>
-          </div>
+        <div class="proof-board reveal visible">
+          <p class="proof-hint">Lo que puedo construir para tu negocio</p>
 
-          <div class="grid grid-cols-2 gap-3">
-            <div class="pos-tile col-span-2 sm:col-span-1">
-              <span class="tile-label">Total vendido</span>
-              <strong>$284.730</strong>
-              <small>47 comprobantes</small>
+          <div class="proof-track">
+            <div class="proof-frame proof-frame-web">
+              <img src="assets/landing-sinbrujula.png" alt="Landing Sin Brújula Viajes">
+              <span class="proof-tag proof-tag-web">Página web</span>
             </div>
-            <div class="pos-tile col-span-2 sm:col-span-1">
-              <span class="tile-label">Stock crítico</span>
-              <strong>12 items</strong>
-              <small>reponer esta semana</small>
+            <span class="proof-plus">+</span>
+            <div class="proof-frame proof-frame-app">
+              <img src="assets/sistemadeventas.png" alt="Sistema de ventas, stock y caja">
+              <span class="proof-tag proof-tag-app">Sistema de gestión</span>
             </div>
           </div>
 
-          <div class="sale-list">
-            <div class="sale-row"><span>Código</span><span>Producto</span><span>Total</span></div>
-            <div class="sale-row"><span>0048</span><span>Combo minorista</span><span>$18.400</span></div>
-            <div class="sale-row"><span>0172</span><span>Artículo contado</span><span>$7.950</span></div>
-            <div class="sale-row"><span>0204</span><span>Venta mayorista</span><span>$43.280</span></div>
-          </div>
+          <ul class="proof-labels">
+            <li>WhatsApp directo</li>
+            <li>Ventas y stock</li>
+            <li>Presencia clara</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <!-- Servicios -->
     <section id="servicios" class="section-block bg-white dark:bg-zinc-900 reveal">
-      <div class="max-w-7xl mx-auto">
-        <div class="mb-12 max-w-4xl">
+      <div class="max-w-5xl mx-auto">
+        <div class="mb-14 max-w-3xl">
           <p class="section-kicker">Servicios</p>
           <h2 class="section-title">Qué puedo resolver para tu negocio.</h2>
           <p class="mt-6 max-w-[68ch] text-lg leading-relaxed text-zinc-600 dark:text-zinc-300">
@@ -166,88 +147,94 @@
           </p>
         </div>
 
-        <div class="services-grid">
-          <article class="service-card">
-            <span class="panel-label">Páginas web</span>
-            <h3>Landing para recibir consultas</h3>
-            <p>Una página clara para explicar qué ofrecés, mostrar confianza y llevar clientes directo a WhatsApp.</p>
-            <ul class="feature-bullets">
-              <li>Diseño responsive</li>
-              <li>Botón directo a WhatsApp</li>
-              <li>SEO básico</li>
-            </ul>
-            <a href="https://wa.me/5493524401654?text=Hola%20Mart%C3%ADn%2C%20quiero%20consultar%20por%20una%20landing%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer" class="service-cta">Quiero una landing</a>
-          </article>
+        <div class="service-list">
+          <div class="service-row">
+            <div class="service-head">
+              <span class="service-num">01</span>
+              <h3>Página web</h3>
+            </div>
+            <div class="service-body">
+              <p>Para recibir consultas y explicar qué ofrecés.</p>
+              <span class="service-detail">Diseño responsive, botón directo a WhatsApp, formulario opcional, SEO básico.</span>
+            </div>
+            <div class="service-action">
+              <a href="https://wa.me/5493524401654?text=Hola%20Mart%C3%ADn%2C%20quiero%20consultar%20por%20una%20landing%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer" class="service-cta">Quiero una landing</a>
+            </div>
+          </div>
 
-          <article class="service-card">
-            <span class="panel-label">Sistemas</span>
-            <h3>Sistema de ventas, stock y caja</h3>
-            <p>Una herramienta simple para registrar ventas, controlar productos y ordenar el trabajo diario del comercio.</p>
-            <ul class="feature-bullets">
-              <li>Ventas y caja</li>
-              <li>Productos y stock</li>
-              <li>Reportes básicos</li>
-            </ul>
-            <a href="https://wa.me/5493524401654?text=Hola%20Mart%C3%ADn%2C%20quiero%20consultar%20por%20un%20sistema%20de%20ventas%2C%20stock%20o%20caja%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer" class="service-cta">Consultar por sistema</a>
-          </article>
+          <div class="service-row">
+            <div class="service-head">
+              <span class="service-num">02</span>
+              <h3>Sistema de ventas</h3>
+            </div>
+            <div class="service-body">
+              <p>Para ordenar stock, caja y operación diaria.</p>
+              <span class="service-detail">Ventas, productos, stock, caja y reportes básicos. Capacitación inicial incluida.</span>
+            </div>
+            <div class="service-action">
+              <a href="https://wa.me/5493524401654?text=Hola%20Mart%C3%ADn%2C%20quiero%20consultar%20por%20un%20sistema%20de%20ventas%2C%20stock%20o%20caja%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer" class="service-cta">Consultar por sistema</a>
+            </div>
+          </div>
 
-          <article class="service-card">
-            <span class="panel-label">Presencia online</span>
-            <h3>Instagram y WhatsApp más claros</h3>
-            <p>Ordeno tus canales básicos para que una persona entienda rápido qué vendés, cómo escribirte y por qué confiar.</p>
-            <ul class="feature-bullets">
-              <li>Bio y links claros</li>
-              <li>WhatsApp preparado</li>
-              <li>Perfil más ordenado</li>
-            </ul>
-            <a href="https://wa.me/5493524401654?text=Hola%20Mart%C3%ADn%2C%20quiero%20mejorar%20la%20presencia%20online%20de%20mi%20negocio." target="_blank" rel="noopener noreferrer" class="service-cta">Ordenar mi presencia</a>
-          </article>
+          <div class="service-row">
+            <div class="service-head">
+              <span class="service-num">03</span>
+              <h3>Presencia online</h3>
+            </div>
+            <div class="service-body">
+              <p>Para que Instagram y WhatsApp comuniquen mejor.</p>
+              <span class="service-detail">Bio y links claros, WhatsApp preparado, perfil más ordenado y mensajes rápidos.</span>
+            </div>
+            <div class="service-action">
+              <a href="https://wa.me/5493524401654?text=Hola%20Mart%C3%ADn%2C%20quiero%20mejorar%20la%20presencia%20online%20de%20mi%20negocio." target="_blank" rel="noopener noreferrer" class="service-cta">Ordenar mi presencia</a>
+            </div>
+          </div>
         </div>
-        <p class="service-budget-note text-center mt-8 text-zinc-500 dark:text-zinc-400">Presupuesto cerrado según alcance. Si el proyecto crece, se puede dividir por etapas.</p>
+
+        <p class="section-note text-center mt-12 text-zinc-500 dark:text-zinc-400">Presupuesto cerrado según alcance. Si el proyecto crece, se puede dividir por etapas.</p>
       </div>
     </section>
 
     <!-- Ejemplos -->
     <section id="ejemplos" class="section-block reveal">
-      <div class="max-w-7xl mx-auto">
-        <div class="mb-12 max-w-4xl">
+      <div class="max-w-5xl mx-auto">
+        <div class="mb-12 max-w-3xl">
           <p class="section-kicker">Ejemplos</p>
-          <h2 class="section-title">Ejemplos concretos de trabajo.</h2>
-          <p class="mt-6 max-w-[68ch] text-lg leading-relaxed text-zinc-600 dark:text-zinc-300">
-            Dos muestras reales del tipo de solución que puedo adaptar a tu negocio: una página para captar consultas y un sistema para ordenar ventas.
-          </p>
+          <h2 class="section-title">Trabajos que muestran lo que hago.</h2>
         </div>
 
-        <div class="examples-grid">
-          <article class="example-card example-card-wide">
-            <a href="https://sinbrujulaviajes.com.ar/" target="_blank" rel="noopener noreferrer" class="example-shot" aria-label="Ver landing de Sin Brújula Viajes">
-              <img src="assets/landing-sinbrujula.png" alt="Inicio de la landing Sin Brújula Viajes">
-            </a>
-            <div class="example-content">
-              <span class="example-badge">Landing real</span>
-              <h3>Landing para agencia de viajes</h3>
-              <p>Página creada para presentar destinos, generar confianza y llevar consultas directamente a WhatsApp.</p>
-              <div class="example-modules">
-                <span>Diseño responsive</span><span>WhatsApp</span><span>Contenido comercial</span>
+        <div class="case-grid">
+          <article class="case-card">
+            <div class="case-frame case-frame-browser">
+              <span class="case-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <div class="case-img-wrap">
+                <img src="assets/landing-sinbrujula.png" alt="Landing Sin Brújula Viajes">
               </div>
-              <div class="example-actions">
-                <a href="https://sinbrujulaviajes.com.ar/" target="_blank" rel="noopener noreferrer" class="example-secondary-cta">Ver landing</a>
+              <span class="case-tag">Landing real</span>
+            </div>
+            <div class="case-info">
+              <p class="case-label">Agencia de viajes</p>
+              <h3 class="case-title">Landing clara, consultas por WhatsApp</h3>
+              <p class="case-result">Página creada para presentar destinos, generar confianza y llevar consultas directamente a WhatsApp.</p>
+              <div class="case-actions">
+                <a href="https://sinbrujulaviajes.com.ar/" target="_blank" rel="noopener noreferrer" class="case-link">sinbrujulaviajes.com.ar <span>&nearr;</span></a>
                 <a href="https://wa.me/5493524401654?text=Hola%20Mart%C3%ADn%2C%20quiero%20una%20landing%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer" class="service-cta">Quiero una parecida</a>
               </div>
             </div>
           </article>
 
-          <article class="example-card example-card-wide">
-            <div class="example-shot">
-              <img src="assets/sistemadeventas.png" alt="Pantalla principal de sistema de ventas, stock y caja">
-            </div>
-            <div class="example-content">
-              <span class="example-badge">Sistema propio</span>
-              <h3>Sistema de ventas, stock y caja</h3>
-              <p>Sistema de escritorio para registrar ventas, controlar productos, revisar caja y ordenar la operación diaria de un comercio.</p>
-              <div class="example-modules">
-                <span>Ventas</span><span>Stock</span><span>Caja</span><span>Productos</span>
+          <article class="case-card">
+            <div class="case-frame case-frame-app">
+              <span class="case-titlebar" aria-hidden="true">Sistema de ventas</span>
+              <div class="case-img-wrap">
+                <img src="assets/sistemadeventas.png" alt="Sistema de ventas, stock y caja">
               </div>
+              <span class="case-tag">Sistema propio</span>
+            </div>
+            <div class="case-info">
+              <p class="case-label">Comercios y negocios</p>
+              <h3 class="case-title">Sistema para ventas, stock y caja</h3>
+              <p class="case-result">Herramienta de escritorio para registrar ventas, controlar productos, revisar caja y ordenar la operación diaria.</p>
               <a href="https://wa.me/5493524401654?text=Hola%20Mart%C3%ADn%2C%20quiero%20consultar%20por%20un%20sistema%20de%20ventas%2C%20stock%20o%20caja%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer" class="service-cta">Consultar por un sistema parecido</a>
             </div>
           </article>
@@ -256,133 +243,154 @@
     </section>
 
     <!-- Sobre mí -->
-    <section id="sobre-mi" class="section-block bg-white dark:bg-zinc-900 reveal">
-      <div class="max-w-7xl mx-auto grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-16 items-start">
+    <section id="sobre-mi" class="section-block bg-stone-100 dark:bg-zinc-900 reveal">
+      <div class="max-w-5xl mx-auto grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-16 items-start">
         <div class="sticky-copy">
           <p class="section-kicker">Sobre mí</p>
-          <h2 class="section-title">Construyo herramientas que se usan todos los días.</h2>
+          <h2 class="section-title">Construyo herramientas simples para negocios que necesitan claridad.</h2>
         </div>
 
-        <div class="space-y-6">
+        <div class="space-y-10">
           <p class="text-xl leading-relaxed text-zinc-600 dark:text-zinc-300">
-            Soy Martín De Lucca, estudiante de programación y desarrollador enfocado en soluciones simples para negocios reales. Me interesa construir herramientas que se usen todos los días: páginas claras, sistemas de ventas, control de stock y flujos que reduzcan el desorden operativo.
+            Soy Martín De Lucca, estudiante de programación y desarrollador. Me enfoco en soluciones simples para negocios reales: páginas claras, sistemas de ventas, control de stock y flujos que reduzcan el desorden operativo. No construyo software enorme: construyo lo que un negocio necesita para funcionar mejor.
           </p>
-          <p class="text-lg leading-relaxed text-zinc-600 dark:text-zinc-300">
-            Trabajo con HTML, CSS, JavaScript, Tailwind, C#, .NET, Java y SQL Server. El objetivo no es mostrar tecnología: es traducir una necesidad del negocio en algo simple de usar.
+
+          <ul class="trust-attrs">
+            <li>
+              <strong>Simple</strong>
+              <span>Herramientas que cualquiera puede usar sin capacitación larga.</span>
+            </li>
+            <li>
+              <strong>Adaptado</strong>
+              <span>Cada solución se arma según cómo trabaja el negocio, no al revés.</span>
+            </li>
+            <li>
+              <strong>Uso diario</strong>
+              <span>Construyo para lo que se usa todos los días: vender, cobrar, atender.</span>
+            </li>
+          </ul>
+
+          <p class="text-sm text-zinc-500 dark:text-zinc-400 font-mono">
+            Stack: HTML, CSS, JavaScript, Tailwind, C#, .NET, Java, SQL Server
           </p>
         </div>
       </div>
     </section>
 
     <!-- Cómo trabajo -->
-    <section id="como-trabajo" class="section-block reveal">
-      <div class="max-w-7xl mx-auto">
-        <div class="mb-12 max-w-4xl">
+    <section id="como-trabajo" class="section-block bg-white dark:bg-zinc-900 reveal">
+      <div class="max-w-5xl mx-auto">
+        <div class="mb-12 max-w-3xl">
           <p class="section-kicker">Proceso</p>
           <h2 class="section-title">Cómo trabajo con cada negocio.</h2>
         </div>
 
-        <div class="process-grid">
-          <div class="process-step">
-            <span class="process-num">01</span>
-            <h3>Escucho lo que necesitás</h3>
-            <p>Charlamos por WhatsApp. Entiendo tu negocio, qué te frena hoy y qué resultado esperás.</p>
+        <div class="process-track">
+          <div class="process-stop">
+            <span class="process-stop-num">01</span>
+            <div>
+              <h3>Escucho</h3>
+              <p>Charlamos por WhatsApp. Entiendo tu negocio, qué te frena y qué resultado esperás.</p>
+            </div>
           </div>
-          <div class="process-step">
-            <span class="process-num">02</span>
-            <h3>Te propongo una solución concreta</h3>
-            <p>Te digo qué se puede hacer, con qué herramientas, en cuánto tiempo y qué necesito de tu lado para arrancar.</p>
+          <div class="process-stop">
+            <span class="process-stop-num">02</span>
+            <div>
+              <h3>Propongo</h3>
+              <p>Te digo qué se puede hacer, con qué herramientas, en cuánto tiempo y qué necesito de tu lado.</p>
+            </div>
           </div>
-          <div class="process-step">
-            <span class="process-num">03</span>
-            <h3>Construyo y te muestro avances</h3>
-            <p>Trabajo con entregas parciales. Ves el sistema o la landing antes de que esté terminada para ajustar lo que haga falta.</p>
+          <div class="process-stop">
+            <span class="process-stop-num">03</span>
+            <div>
+              <h3>Construyo</h3>
+              <p>Trabajo con entregas parciales. Ves el sistema o la landing antes de que esté terminada.</p>
+            </div>
           </div>
-          <div class="process-step">
-            <span class="process-num">04</span>
-            <h3>Entrego y te dejo funcionando</h3>
-            <p>Recibís todo listo: acceso, instrucciones simples y soporte inicial para que arranques sin depender de mí.</p>
+          <div class="process-stop">
+            <span class="process-stop-num">04</span>
+            <div>
+              <h3>Entrego</h3>
+              <p>Recibís todo listo: acceso, instrucciones y soporte inicial para que arranques sin depender de mí.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Contacto -->
-    <section id="contacto" class="section-block bg-white dark:bg-zinc-900 reveal">
-      <div class="max-w-7xl mx-auto grid lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-16">
-        <div class="space-y-6">
+    <section id="contacto" class="section-block bg-stone-100 dark:bg-zinc-900 reveal">
+      <div class="max-w-5xl mx-auto">
+        <div class="mb-12 max-w-3xl">
           <p class="section-kicker">Contacto</p>
           <h2 class="section-title">Contame qué necesita tu negocio.</h2>
-          <p class="text-lg leading-relaxed text-zinc-600 dark:text-zinc-300">
-            Lo más rápido es escribirme por WhatsApp con una idea básica de lo que querés resolver.
+          <p class="mt-6 max-w-[54ch] text-lg leading-relaxed text-zinc-600 dark:text-zinc-300">
+            Lo más directo es escribirme por WhatsApp con una idea básica de lo que querés resolver.
           </p>
-
-          <a href="https://wa.me/5493524401654?text=Hola%20Mart%C3%ADn%2C%20tengo%20un%20negocio%20y%20quiero%20consultar%20por%20tus%20servicios." target="_blank" rel="noopener noreferrer" class="whatsapp-promo">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Escribirme por WhatsApp
-          </a>
-
-          <div class="flex flex-col gap-3 text-sm font-medium pt-4 border-t border-zinc-200 dark:border-zinc-700">
-            <a href="https://www.linkedin.com/in/martin-de-lucca-066b84323" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn</a>
-            <a href="https://github.com/Martindelucca" target="_blank" rel="noopener noreferrer" class="contact-link">GitHub</a>
-          </div>
         </div>
 
-        <div>
-          <p class="text-sm font-medium mb-4 text-zinc-500 dark:text-zinc-400">¿Preferís que te escriba yo? Dejame tus datos.</p>
-          <form id="contact-form" action="https://formspree.io/f/xzdqaevb" method="POST" class="contact-form">
-            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-            <div class="form-block">
-              <label for="service">Qué necesitás</label>
-              <select id="service" name="service" required>
-                <option value="">Elegir una opción</option>
-                <option>Quiero una landing</option>
-                <option>Necesito un sistema de ventas / stock</option>
-                <option>Quiero mejorar mi presencia online</option>
-                <option>No estoy seguro, quiero orientación</option>
-              </select>
+        <div class="contact-split">
+          <div class="contact-primary">
+            <a href="https://wa.me/5493524401654?text=Hola%20Mart%C3%ADn%2C%20tengo%20un%20negocio%20y%20quiero%20consultar%20por%20tus%20servicios." target="_blank" rel="noopener noreferrer" class="whatsapp-promo">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Escribirme por WhatsApp
+            </a>
+            <p class="contact-sub">Te respondo en el día, sin vueltas.</p>
+
+            <div class="flex flex-col gap-3 pt-6 mt-6 border-t border-zinc-200 dark:border-zinc-700">
+              <a href="https://www.linkedin.com/in/martin-de-lucca-066b84323" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn</a>
+              <a href="https://github.com/Martindelucca" target="_blank" rel="noopener noreferrer" class="contact-link">GitHub</a>
             </div>
-            <div class="form-block">
-              <label for="name">Nombre</label>
-              <input type="text" id="name" name="name" required placeholder="Tu nombre">
-            </div>
-            <div class="form-block">
-              <label for="business">Negocio / rubro</label>
-              <input type="text" id="business" name="business" placeholder="Ej: rotisería, gimnasio, agencia...">
-            </div>
-            <div class="form-block">
-              <label for="whatsapp">WhatsApp</label>
-              <input type="tel" id="whatsapp" name="whatsapp" required placeholder="Tu número con código de área">
-            </div>
-            <div class="form-block">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required placeholder="tu@email.com">
-            </div>
-            <div class="form-block">
-              <label for="message">Mensaje</label>
-              <textarea id="message" name="message" rows="4" required placeholder="Contame qué vendés, cómo trabajás hoy y qué te gustaría mejorar."></textarea>
-            </div>
-            <button type="submit" class="tactile w-full rounded-full bg-zinc-950 px-6 py-3 text-sm font-semibold text-white hover:bg-cyan-700 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-cyan-200 transition-colors">
-              Enviar mensaje
-            </button>
-            <p id="form-status" class="text-sm text-center hidden"></p>
-          </form>
+          </div>
+
+          <div class="contact-secondary">
+            <p class="text-xs uppercase tracking-[0.2em] font-mono text-zinc-500 dark:text-zinc-400 mb-4">También podés dejarme tus datos</p>
+            <form id="contact-form" action="https://formspree.io/f/xzdqaevb" method="POST" class="contact-form">
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+              <div class="form-block">
+                <label for="service">Qué necesitás</label>
+                <select id="service" name="service" required>
+                  <option value="">Elegir una opción</option>
+                  <option>Quiero una landing</option>
+                  <option>Necesito un sistema de ventas / stock</option>
+                  <option>Quiero mejorar mi presencia online</option>
+                  <option>No estoy seguro, quiero orientación</option>
+                </select>
+              </div>
+              <div class="form-block">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" required placeholder="Tu nombre">
+              </div>
+              <div class="form-block">
+                <label for="whatsapp">WhatsApp</label>
+                <input type="tel" id="whatsapp" name="whatsapp" required placeholder="Tu número con código de área">
+              </div>
+              <div class="form-block">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" rows="3" required placeholder="Contame qué vendés, cómo trabajás hoy y qué te gustaría mejorar."></textarea>
+              </div>
+              <button type="submit" class="tactile w-full rounded-full bg-zinc-950 px-6 py-3 text-sm font-semibold text-white hover:bg-cyan-700 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-cyan-200 transition-colors">
+                Enviar
+              </button>
+              <p id="form-status" class="text-sm text-center hidden"></p>
+            </form>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="section-block reveal">
-      <div class="max-w-4xl mx-auto">
+    <section id="faq" class="section-block bg-white dark:bg-zinc-900 reveal">
+      <div class="max-w-3xl mx-auto">
         <div class="mb-12">
           <p class="section-kicker">Preguntas frecuentes</p>
           <h2 class="section-title">Lo que suelen preguntarme.</h2>
         </div>
 
-        <div class="faq-grid">
+        <div class="faq-list">
           <details class="faq-item">
-            <summary>¿Qué necesito tener antes de empezar?</summary>
-            <p>Para una landing, alcanza con información básica del negocio, fotos/logo si tenés y una idea de qué querés comunicar. Para un sistema, primero vemos cómo trabajás hoy y qué necesitás ordenar.</p>
+            <summary>¿Qué necesito para empezar?</summary>
+            <p>Para una landing, alcanza con información básica del negocio y una idea de qué querés comunicar. Para un sistema, primero vemos cómo trabajás hoy y qué necesitás ordenar.</p>
           </details>
           <details class="faq-item">
             <summary>¿Cuánto tarda una landing?</summary>
@@ -394,7 +402,7 @@
           </details>
           <details class="faq-item">
             <summary>¿Tengo que saber algo técnico?</summary>
-            <p>No. La idea es que me cuentes cómo trabaja tu negocio y qué problema querés resolver. Yo traduzco eso a una solución técnica.</p>
+            <p>No. La idea es que me cuentes cómo trabaja tu negocio y qué problema querés resolver. Yo lo traduzco a una solución.</p>
           </details>
           <details class="faq-item">
             <summary>¿Puedo pagar por etapas?</summary>
@@ -405,7 +413,7 @@
     </section>
   </main>
 
-  <footer class="px-5 md:px-8 py-8 border-t border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950">
+  <footer class="px-5 md:px-8 py-8 border-t border-zinc-200 bg-stone-50 dark:border-zinc-800 dark:bg-zinc-950">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-zinc-500 dark:text-zinc-400">
       <p>&copy; <span id="current-year"></span> Martín De Lucca. Soluciones digitales para negocios locales.</p>
       <div class="flex gap-4">
