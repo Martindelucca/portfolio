@@ -6,10 +6,10 @@ const html = fs.readFileSync(path.join(__dirname, '..', 'index.html'), 'utf8');
 const requiredSnippets = [
   'https://formspree.io/f/xzdqaevb',
   'Páginas web y sistemas simples para negocios que quieren vender mejor',
-  'Consultar por WhatsApp',
+  'Consultar por mi negocio',
   'id="servicios"',
   'id="ejemplos"',
-  'Landing clara, consultas por WhatsApp',
+  'De solo Instagram a una web que convierte',
   'Presencia online',
   'Sistema para ventas, stock y caja',
   'assets/landing-sinbrujula.png',
@@ -20,12 +20,18 @@ const requiredSnippets = [
   'Necesito un sistema de ventas / stock',
   'No estoy seguro, quiero orientación',
   'Stack: HTML, CSS, JavaScript, Tailwind, C#, .NET, Java, SQL Server',
+  'id="problemas"',
   'id="como-trabajo"',
   'id="faq"',
   'id="sobre-mi"',
   'assets/og-image.png',
   'Presupuesto cerrado según alcance',
-  'Soluciones digitales para negocios locales'
+  'Revisión gratis',
+  'Diagnóstico rápido',
+  'Señales de que tu negocio necesita ordenar su presencia digital',
+  'Tres formas concretas de ayudarte',
+  'mantenimiento mensual que cubre soporte',
+  'Soluciones digitales para negocios locales',
 ];
 
 var whatsappOk =
@@ -53,7 +59,8 @@ const forbiddenSnippets = [
   'Demo funcional con lógica preparada',
   'Sistema simple para ventas, stock y caja',
   'Instagram + WhatsApp listo para vender',
-  'No reemplaza un ERP complejo'
+  'No reemplaza un ERP complejo',
+  'Consultar por WhatsApp'
 ];
 
 var missing = requiredSnippets.filter(function (snippet) { return !html.includes(snippet); });

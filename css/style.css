@@ -285,9 +285,79 @@ html {
   color: #71717a;
 }
 
+.service-for {
+  display: block;
+  margin-top: 0.55rem;
+  font-size: 0.78rem;
+  color: #0e7490;
+  font-weight: 600;
+}
+
+.dark .service-for {
+  color: #67e8f9;
+}
+
 .service-action {
   display: flex;
   justify-content: flex-end;
+}
+
+/* --- Problemas --- */
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0;
+}
+
+.problem-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #e4e4e7;
+}
+
+.dark .problem-item {
+  border-color: #27272a;
+}
+
+.problem-item:last-child {
+  border-bottom: 0;
+}
+
+.problem-item:first-child {
+  padding-top: 0;
+}
+
+.problem-icon {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0e7490;
+  flex-shrink: 0;
+  width: 1.8rem;
+}
+
+.dark .problem-icon {
+  color: #22d3ee;
+}
+
+.problem-item strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.2rem;
+}
+
+.problem-item p {
+  font-size: 0.88rem;
+  color: #71717a;
+  line-height: 1.6;
+}
+
+.dark .problem-item p {
+  color: #a1a1aa;
 }
 
 /* --- Service CTA (WhatsApp icon pill for services) --- */
@@ -475,6 +545,11 @@ html {
   color: #52525b;
   line-height: 1.65;
   font-size: 0.92rem;
+  margin-bottom: 0.5rem;
+}
+
+.case-result:last-child {
+  margin-bottom: 0;
 }
 
 .dark .case-result {
