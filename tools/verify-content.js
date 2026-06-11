@@ -56,6 +56,13 @@ var forbidden = forbiddenSnippets.filter(function (snippet) { return html.includ
 
 var errors = [];
 
+// Social image must be the rendered card, not a blank fallback screenshot.
+var ogImagePath = path.join(__dirname, '..', 'assets', 'og-image.png');
+var ogImageSize = fs.existsSync(ogImagePath) ? fs.statSync(ogImagePath).size : 0;
+if (ogImageSize < 10000) {
+  errors.push('assets/og-image.png must exist and be larger than 10KB. Current size: ' + ogImageSize + ' bytes');
+}
+
 // Package.json validations
 var pkgRaw = fs.readFileSync(path.join(__dirname, '..', 'package.json'), 'utf8');
 var pkg = JSON.parse(pkgRaw);

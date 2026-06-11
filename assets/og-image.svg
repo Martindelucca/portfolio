@@ -16,6 +16,6 @@
   <rect x="48" y="268" width="320" height="4" rx="2" fill="url(#accent)"/>
   <text x="48" y="340" font-family="system-ui,sans-serif" font-size="36" font-weight="600" fill="#d4d4d8" letter-spacing="-0.02em">Landings y sistemas para negocios locales</text>
   <text x="48" y="400" font-family="monospace,monospace" font-size="22" fill="#52525b" letter-spacing="0.08em">WHATSAPP · POS · PRESENCIA ONLINE</text>
-  <rect x="48" y="500" width="180" height="48" rx="24" fill="#16a34a"/>
-  <text x="138" y="532" font-family="system-ui,sans-serif" font-size="20" font-weight="700" fill="white" text-anchor="middle">Consultar por WhatsApp</text>
+  <rect x="48" y="500" width="260" height="48" rx="24" fill="#16a34a"/>
+  <text x="178" y="532" font-family="system-ui,sans-serif" font-size="20" font-weight="700" fill="white" text-anchor="middle">Consultar por WhatsApp</text>
 </svg>
