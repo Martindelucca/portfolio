@@ -20,7 +20,7 @@ const requiredSnippets = [
   'Necesito un sistema de ventas / stock',
   'No estoy seguro, quiero orientación',
   'Stack: HTML, CSS, JavaScript, Tailwind, C#, .NET, Java, SQL Server',
-  'id="problemas"',
+  'id="diagnostico"',
   'id="como-trabajo"',
   'id="faq"',
   'id="sobre-mi"',
