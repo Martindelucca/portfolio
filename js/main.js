@@ -103,6 +103,14 @@
       closeMenu();
     });
 
+    // Close menu when resizing to desktop
+    var mqDesktop = window.matchMedia('(min-width: 1024px)');
+    mqDesktop.addEventListener('change', function (e) {
+      if (e.matches && isMenuOpen()) {
+        closeMenu();
+      }
+    });
+
     var sectionLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-link[href^="#"], .mobile-link[href^="#"]'));
 
     function setActiveLink(hash) {

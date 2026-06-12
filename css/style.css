@@ -75,11 +75,21 @@ html {
 }
 
 #mobile-menu {
-  transition: opacity 0.2s ease;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
 }
 
-#mobile-menu:not(.hidden) {
-  display: block;
+#mobile-menu.menu-closed {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media (min-width: 1024px) {
+  #mobile-menu {
+    display: none !important;
+  }
 }
 
 .tactile {
