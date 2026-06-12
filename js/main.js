@@ -43,13 +43,20 @@
     var menuClose = document.getElementById('menu-close');
 
     if (navbar) {
+      var navbarTicking = false;
       window.addEventListener('scroll', function () {
-        if (window.scrollY > 50) {
-          navbar.classList.add('scrolled');
-        } else {
-          navbar.classList.remove('scrolled');
+        if (!navbarTicking) {
+          requestAnimationFrame(function () {
+            if (window.scrollY > 50) {
+              navbar.classList.add('scrolled');
+            } else {
+              navbar.classList.remove('scrolled');
+            }
+            navbarTicking = false;
+          });
+          navbarTicking = true;
         }
-      });
+      }, { passive: true });
     }
 
     function closeMenu() {
