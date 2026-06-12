@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-12T21:08:55Z",
+  "title": "Design System: Portfolio - Martin De Lucca",
+  "extensions": {
+    "colorMeta": {
+      "action-green": {
+        "role": "primary",
+        "displayName": "WhatsApp Action Green",
+        "canonical": "#15803d",
+        "tonalRamp": ["oklch(18% 0.06 149)", "oklch(30% 0.09 149)", "oklch(42% 0.13 149)", "oklch(52.7% 0.154 150.069)", "oklch(62.7% 0.194 149.214)", "oklch(72% 0.16 149)", "oklch(84% 0.10 149)", "oklch(94% 0.05 149)"]
+      },
+      "guidance-cyan": {
+        "role": "secondary",
+        "displayName": "Guidance Cyan",
+        "canonical": "#0e7490",
+        "tonalRamp": ["oklch(18% 0.05 220)", "oklch(28% 0.07 220)", "oklch(39% 0.08 220)", "oklch(50% 0.09 220)", "oklch(62% 0.10 220)", "oklch(74% 0.09 220)", "oklch(86% 0.06 220)", "oklch(95% 0.03 220)"]
+      },
+      "light-bg": {
+        "role": "neutral",
+        "displayName": "Clear Counter Surface",
+        "canonical": "#fafafa",
+        "tonalRamp": ["#18181b", "#27272a", "#3f3f46", "#52525b", "#71717a", "#d4d4d8", "#f4f4f5", "#fafafa"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Working Ink",
+        "canonical": "#18181b",
+        "tonalRamp": ["#09090b", "#18181b", "#27272a", "#3f3f46", "#52525b", "#71717a", "#a1a1aa", "#fafafa"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero value proposition and the biggest claims only." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles with clear business language." },
+      "title": { "displayName": "Title", "purpose": "Case, service, FAQ, and component titles." },
+      "body": { "displayName": "Body", "purpose": "Plain explanatory Spanish copy." },
+      "label": { "displayName": "Mono Label", "purpose": "Short orientation labels, numbers, tags, and operational details." }
+    },
+    "shadows": [
+      { "name": "action-lift", "value": "0 14px 28px -18px rgba(21, 128, 61, 0.72)", "purpose": "Primary WhatsApp CTAs." },
+      { "name": "floating-contact-lift", "value": "0 18px 35px -20px rgba(21, 128, 61, 0.9)", "purpose": "Fixed WhatsApp button only." },
+      { "name": "tactile-promo-lift", "value": "0 14px 30px -15px rgba(21, 128, 61, 0.7)", "purpose": "Contact-section WhatsApp promo." },
+      { "name": "panel-glow", "value": "0 20px 50px -30px rgba(24, 24, 27, 0.5)", "purpose": "Rare framed modules that need separation." }
+    ],
+    "motion": [
+      { "name": "ease-tactile", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Button compression and reveal motion." },
+      { "name": "duration-fast", "value": "0.2s", "purpose": "Hover, active, and color transitions." },
+      { "name": "duration-reveal", "value": "0.65s", "purpose": "Scroll reveal progressive enhancement." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "stack", "value": "900px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "WhatsApp Button",
+      "kind": "button",
+      "refersTo": "button-whatsapp",
+      "description": "Primary contact action for WhatsApp and free-review prompts.",
+      "html": "<a class=\"ds-btn-whatsapp\" href=\"#\">Consultar por mi negocio</a>",
+      "css": ".ds-btn-whatsapp{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:#15803d;color:#fff;padding:.75rem 1.5rem;font:700 .875rem/1.2 Outfit,ui-sans-serif,system-ui;text-decoration:none;box-shadow:0 14px 28px -18px rgba(21,128,61,.72);transition:transform .2s cubic-bezier(.16,1,.3,1),background-color .2s ease}.ds-btn-whatsapp:hover{background:#166534;transform:translateY(-1px)}.ds-btn-whatsapp:active{transform:scale(.98) translateY(1px)}.ds-btn-whatsapp:focus-visible{outline:3px solid rgba(6,182,212,.35);outline-offset:3px}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Secondary navigation action that supports but never competes with green contact CTAs.",
+      "html": "<a class=\"ds-btn-secondary\" href=\"#\">Ver ejemplos</a>",
+      "css": ".ds-btn-secondary{display:inline-flex;align-items:center;justify-content:center;border:1px solid #d4d4d8;border-radius:999px;background:rgba(255,255,255,.7);color:#18181b;padding:.75rem 1.5rem;font:700 .875rem/1.2 Outfit,ui-sans-serif,system-ui;text-decoration:none;transition:transform .2s cubic-bezier(.16,1,.3,1),border-color .2s ease,color .2s ease}.ds-btn-secondary:hover{border-color:#0e7490;color:#0e7490}.ds-btn-secondary:active{transform:scale(.98) translateY(1px)}.ds-btn-secondary:focus-visible{outline:3px solid rgba(6,182,212,.25);outline-offset:3px}"
+    },
+    {
+      "name": "Input Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Visible form field for contact intake; plain, readable, and direct.",
+      "html": "<label class=\"ds-field\"><span>WhatsApp</span><input placeholder=\"Tu numero con codigo de area\"></label>",
+      "css": ".ds-field{display:grid;gap:.4rem;font-family:Outfit,ui-sans-serif,system-ui;color:#18181b}.ds-field span{font-size:.82rem;font-weight:700}.ds-field input{width:100%;border:1px solid #d4d4d8;border-radius:.85rem;background:rgba(255,255,255,.8);padding:.7rem .85rem;color:#18181b;font:400 .88rem/1.4 Outfit,ui-sans-serif,system-ui;outline:none;transition:border-color .2s ease,box-shadow .2s ease}.ds-field input::placeholder{color:#52525b}.ds-field input:focus{border-color:#0e7490;box-shadow:0 0 0 3px rgba(6,182,212,.1)}"
+    },
+    {
+      "name": "Nav Pill",
+      "kind": "nav",
+      "refersTo": "nav-pill",
+      "description": "Desktop navigation group with quiet hover states and a service-counter feel.",
+      "html": "<nav class=\"ds-nav-pill\"><a href=\"#\">Servicios</a><a href=\"#\">Ejemplos</a><a href=\"#\">Contacto</a></nav>",
+      "css": ".ds-nav-pill{display:inline-flex;align-items:center;gap:.25rem;border:1px solid rgba(228,228,231,.7);border-radius:999px;background:rgba(255,255,255,.7);padding:.25rem;font:500 .875rem/1.2 Outfit,ui-sans-serif,system-ui}.ds-nav-pill a{border-radius:999px;color:#18181b;padding:.5rem 1rem;text-decoration:none;transition:background-color .2s ease,color .2s ease}.ds-nav-pill a:hover{background:#f4f4f5;color:#0e7490}.ds-nav-pill a:focus-visible{outline:3px solid rgba(6,182,212,.25);outline-offset:2px}"
+    },
+    {
+      "name": "Service Row",
+      "kind": "custom",
+      "refersTo": "service-row",
+      "description": "Signature service pattern for concrete offers; preferred over generic cards.",
+      "html": "<div class=\"ds-service-row\"><div class=\"ds-service-head\"><span>01</span><h3>Pagina web</h3></div><p>Para recibir consultas y explicar que ofreces.</p><a href=\"#\">Quiero una pagina web</a></div>",
+      "css": ".ds-service-row{display:grid;grid-template-columns:.9fr 1.5fr auto;gap:2rem;align-items:start;border-bottom:1px solid #e4e4e7;padding:1.75rem 0;font-family:Outfit,ui-sans-serif,system-ui}.ds-service-head{display:flex;align-items:baseline;gap:.65rem}.ds-service-head span{color:#0e7490;font:800 1.8rem/1 JetBrains Mono,ui-monospace,monospace;letter-spacing:-.04em}.ds-service-head h3{margin:0;color:#18181b;font-size:clamp(1.65rem,2.5vw,2.5rem);font-weight:800;line-height:1;letter-spacing:-.04em}.ds-service-row p{margin:0;color:#52525b;line-height:1.65}.ds-service-row a{display:inline-flex;width:max-content;border-radius:999px;background:#18181b;color:#fff;padding:.7rem 1.05rem;font-size:.82rem;font-weight:700;text-decoration:none}.ds-service-row a:hover{background:#0e7490}@media(max-width:900px){.ds-service-row{grid-template-columns:1fr;gap:.75rem;padding:1.25rem 0}}"
+    },
+    {
+      "name": "Case Frame",
+      "kind": "card",
+      "refersTo": "case-frame",
+      "description": "Proof container for real screenshots, not decorative dashboard filler.",
+      "html": "<article class=\"ds-case-frame\"><div class=\"ds-case-media\"><span>Pagina web real</span></div><h3>De solo Instagram a una pagina que genera confianza</h3><p>Pagina con destinos, confianza y boton directo a WhatsApp.</p></article>",
+      "css": ".ds-case-frame{font-family:Outfit,ui-sans-serif,system-ui;color:#18181b}.ds-case-media{position:relative;display:grid;place-items:center;aspect-ratio:16/10;border:1px solid #e4e4e7;border-radius:1.35rem;background:#f4f4f5;overflow:hidden}.ds-case-media span{position:absolute;right:.55rem;bottom:.55rem;border-radius:999px;background:rgba(24,24,27,.82);color:#fafafa;padding:.3rem .65rem;font:700 .58rem/1.2 JetBrains Mono,ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase}.ds-case-frame h3{margin:1.25rem .25rem .65rem;font-size:clamp(1.3rem,1.8vw,1.9rem);font-weight:800;line-height:1.1;letter-spacing:-.03em}.ds-case-frame p{margin:0 .25rem;color:#52525b;font-size:.92rem;line-height:1.65}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Clear Counter",
+    "overview": "This system should feel like walking up to a reliable local service counter: the offer is visible, the next step is obvious, and the tone is calm enough for a non-technical business owner to keep reading. The design is not trying to prove complexity. It turns local-business problems into rows, examples, forms, and contact paths that can be understood at a glance. The visual language is practical calm. Stone and zinc surfaces do most of the work, cyan guides attention, and green is reserved for WhatsApp and action moments. The interface uses rounded pills, clean rules, visible form fields, and restrained tactile motion to make the page feel usable before a visitor has hired Martin.",
+    "keyCharacteristics": [
+      "Business-first hierarchy: problems, services, proof, and contact paths before technology.",
+      "Restrained neutral surfaces with two functional accents: cyan for guidance, green for action.",
+      "Tactile and obvious components: pill CTAs, row-based service modules, visible form fields, direct links.",
+      "Minimal depth: borders, tonal layers, and small shadows only where they clarify interaction.",
+      "Plain Spanish copy supported by generous spacing and short line lengths."
+    ],
+    "rules": [
+      { "name": "The Green Means Contact Rule", "body": "Green is reserved for WhatsApp, review, and submit moments. Do not use green as a decorative accent in unrelated sections.", "section": "colors" },
+      { "name": "The Cyan Guides Rule", "body": "Cyan marks structure and discovery: section markers, numbers, text links, focus states. Cyan should point; green should convert.", "section": "colors" },
+      { "name": "The Neutral Counter Rule", "body": "Body backgrounds must remain neutral stone/zinc. Do not drift into cream, sand, parchment, or startup pastel surfaces.", "section": "colors" },
+      { "name": "The Plain Spanish Rule", "body": "Type exists to make the business promise obvious. Favor short concrete Spanish over technical vocabulary, decorative phrasing, or meta-copy.", "section": "typography" },
+      { "name": "The Mono Is Evidence Rule", "body": "JetBrains Mono is allowed for small labels, numbers, and system-like details. It is forbidden as a lazy shorthand for being technical.", "section": "typography" },
+      { "name": "The Flat Until Useful Rule", "body": "Borders and tonal contrast are the default depth tools. Shadows appear only when they make an action or framed proof clearer.", "section": "elevation" },
+      { "name": "The No Ghost Cards Rule", "body": "Do not pair a 1px border with a wide soft shadow on generic cards. Pick the border or a tight functional lift, not both.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do lead every new section with a business problem, outcome, or next step before mentioning the technology.",
+      "Do reserve Action Green for WhatsApp, review, and submit actions so conversion paths stay unmistakable.",
+      "Do use Guidance Cyan for structure, links, numbers, and focus states.",
+      "Do keep body copy at 54-68ch where possible and use generous line-height for readability.",
+      "Do preserve keyboard access, reduced motion behavior, and WCAG AA contrast in both themes.",
+      "Do use row-based service/process structures when the content is sequential or comparative; they are more on-brand than generic identical card grids."
+    ],
+    "donts": [
+      "Don't use generic SaaS and startup landing-page cliches: fake metrics, inflated promises, abstract productivity claims, or a hero that could belong to any software company.",
+      "Don't use cold corporate styling that feels distant from local businesses.",
+      "Don't use generic developer portfolio tropes that center the technology stack more than the client's business problem.",
+      "Don't use over-technical visuals, decorative dashboards, or complexity as proof of expertise.",
+      "Don't use green for decorative icons, labels, or background flourishes; green means contact.",
+      "Don't repeat tiny uppercase tracked eyebrows above every new section by default. One clear label can orient; repeated labels become scaffolding.",
+      "Don't use gradient text, side-stripe accent borders, sketchy SVG illustrations, diagonal stripe backgrounds, or glassmorphism as decoration.",
+      "Don't combine 1px borders with wide soft shadows on generic cards. The system is flat until depth is useful."
+    ]
+  }
+}

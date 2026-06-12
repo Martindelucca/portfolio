@@ -11,6 +11,12 @@
     if (!themeToggle) return;
     var html = document.documentElement;
 
+    function updateThemeToggleState() {
+      var isDark = html.classList.contains('dark');
+      themeToggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+      themeToggle.setAttribute('aria-label', isDark ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro');
+    }
+
     function setTheme(theme) {
       if (theme === 'dark') {
         html.classList.add('dark');
@@ -18,7 +24,10 @@
         html.classList.remove('dark');
       }
       try { localStorage.setItem('theme', theme); } catch (e) { /* noop */ }
+      updateThemeToggleState();
     }
+
+    updateThemeToggleState();
 
     themeToggle.addEventListener('click', function () {
       setTheme(html.classList.contains('dark') ? 'light' : 'dark');
@@ -87,45 +96,163 @@
       closeMenu();
     });
 
+    var sectionLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-link[href^="#"], .mobile-link[href^="#"]'));
+
+    function setActiveLink(hash) {
+      sectionLinks.forEach(function (link) {
+        var isActive = link.getAttribute('href') === hash;
+        link.classList.toggle('active', isActive);
+        if (isActive) {
+          link.setAttribute('aria-current', 'location');
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      });
+    }
+
+    function updateActiveLink() {
+      var activeHash = '';
+      sectionLinks.forEach(function (link) {
+        var target = document.querySelector(link.getAttribute('href'));
+        if (target && target.getBoundingClientRect().top <= 120) {
+          activeHash = link.getAttribute('href');
+        }
+      });
+      setActiveLink(activeHash);
+    }
+
     // Smooth scroll + close mobile menu
-    document.querySelectorAll('.nav-link, .mobile-link').forEach(function (link) {
+    sectionLinks.forEach(function (link) {
       link.addEventListener('click', function (e) {
         e.preventDefault();
-        var target = document.querySelector(link.getAttribute('href'));
+        var href = link.getAttribute('href');
+        var target = document.querySelector(href);
         if (target) {
           target.scrollIntoView({ behavior: 'smooth' });
+          setActiveLink(href);
         }
         closeMenu();
       });
     });
+
+    if (sectionLinks.length) {
+      updateActiveLink();
+      var ticking = false;
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          requestAnimationFrame(function () {
+            updateActiveLink();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }, { passive: true });
+    }
   }
 
   // --- Contact form ---
   function initContactForm() {
     var contactForm = document.getElementById('contact-form');
     var formStatus = document.getElementById('form-status');
+    var submitButton = document.getElementById('contact-submit');
     if (!contactForm || !formStatus) return;
+
+    var isSubmitting = false;
+    var defaultSubmitText = submitButton ? submitButton.textContent.trim() || 'Enviar' : 'Enviar';
+    var whatsappFallbackUrl = 'https://wa.me/5493524401654?text=Hola%20Mart%C3%ADn%2C%20quise%20enviar%20el%20formulario%20pero%20tuve%20un%20problema.';
+
+    function setStatus(type, message, isHtml) {
+      if (isHtml) {
+        formStatus.innerHTML = message;
+      } else {
+        formStatus.textContent = message;
+      }
+      formStatus.className = 'form-status text-sm text-center ' + type;
+      formStatus.classList.remove('hidden');
+    }
+
+    function setSubmitting(submitting) {
+      isSubmitting = submitting;
+      if (!submitButton) return;
+      submitButton.disabled = submitting;
+      submitButton.setAttribute('aria-busy', submitting ? 'true' : 'false');
+      submitButton.textContent = submitting ? 'Enviando...' : defaultSubmitText;
+    }
+
+    function setFieldsInvalid(isInvalid) {
+      contactForm.querySelectorAll('input[required], select[required], textarea[required]').forEach(function (field) {
+        field.setAttribute('aria-invalid', isInvalid ? 'true' : 'false');
+      });
+    }
+
+    contactForm.querySelectorAll('input[required], select[required], textarea[required]').forEach(function (field) {
+      field.setAttribute('aria-invalid', 'false');
+      field.addEventListener('invalid', function () {
+        field.setAttribute('aria-invalid', 'true');
+      });
+      field.addEventListener('input', function () {
+        if (field.checkValidity()) field.setAttribute('aria-invalid', 'false');
+      });
+      field.addEventListener('change', function () {
+        if (field.checkValidity()) field.setAttribute('aria-invalid', 'false');
+      });
+    });
+
+    function fallbackMessage(prefix) {
+      return prefix + ' <a href="' + whatsappFallbackUrl + '" target="_blank" rel="noopener noreferrer">Escribime por WhatsApp</a> y lo vemos por ahí.';
+    }
 
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
+      if (isSubmitting) return;
+
+      setFieldsInvalid(false);
+
+      if (navigator && navigator.onLine === false) {
+        setStatus('error', fallbackMessage('Parece que estás sin conexión.'), true);
+        return;
+      }
+
+      setSubmitting(true);
+      setStatus('pending', 'Enviando tu consulta...');
+
       var formData = new FormData(contactForm);
-      fetch(contactForm.action, {
+      var controller = window.AbortController ? new AbortController() : null;
+      var timeoutId = controller ? window.setTimeout(function () { controller.abort(); }, 12000) : null;
+      var fetchOptions = {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }
-      }).then(function (response) {
+      };
+      if (controller) fetchOptions.signal = controller.signal;
+
+      fetch(contactForm.action, fetchOptions).then(function (response) {
         if (response.ok) {
-          formStatus.textContent = 'Mensaje enviado con éxito. Te responderé pronto.';
-          formStatus.className = 'text-sm text-center text-green-600 dark:text-green-400';
+          setStatus('success', 'Mensaje enviado con éxito. Te responderé pronto.');
           contactForm.reset();
+          setFieldsInvalid(false);
         } else {
-          throw new Error('Error al enviar');
+          var error = new Error('Error al enviar');
+          error.status = response.status;
+          throw error;
         }
-      }).catch(function () {
-        formStatus.textContent = 'Hubo un error. Intentá de nuevo o escribime por WhatsApp.';
-        formStatus.className = 'text-sm text-center text-red-600 dark:text-red-400';
+      }).catch(function (error) {
+        if (error && error.name === 'AbortError') {
+          setStatus('error', fallbackMessage('La conexión tardó demasiado y frené el envío para evitar duplicados.'), true);
+          return;
+        }
+        if (navigator && navigator.onLine === false) {
+          setStatus('error', fallbackMessage('Se cortó la conexión mientras enviabas el formulario.'), true);
+          return;
+        }
+        if (error && error.status === 429) {
+          setStatus('error', fallbackMessage('Hubo demasiados intentos seguidos.'), true);
+          return;
+        }
+        setStatus('error', fallbackMessage('No pude enviar el formulario.'), true);
       }).finally(function () {
-        formStatus.classList.remove('hidden');
+        if (timeoutId) window.clearTimeout(timeoutId);
+        setSubmitting(false);
       });
     });
   }
