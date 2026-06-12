@@ -75,12 +75,15 @@ html {
 }
 
 #mobile-menu {
+  max-height: 400px;
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
+  overflow: hidden;
+  transition: opacity 0.2s ease-out, visibility 0.2s ease-out, max-height 0.2s ease-out;
 }
 
 #mobile-menu.menu-closed {
+  max-height: 0;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
