@@ -60,21 +60,21 @@
     }
 
     function closeMenu() {
-      if (mobileMenu) mobileMenu.classList.add('hidden');
+      if (mobileMenu) mobileMenu.classList.add('menu-closed');
       if (menuOpen) menuOpen.classList.remove('hidden');
       if (menuClose) menuClose.classList.add('hidden');
       if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
     }
 
     function openMenu() {
-      if (mobileMenu) mobileMenu.classList.remove('hidden');
+      if (mobileMenu) mobileMenu.classList.remove('menu-closed');
       if (menuOpen) menuOpen.classList.add('hidden');
       if (menuClose) menuClose.classList.remove('hidden');
       if (menuToggle) menuToggle.setAttribute('aria-expanded', 'true');
     }
 
     function isMenuOpen() {
-      return mobileMenu && !mobileMenu.classList.contains('hidden');
+      return mobileMenu && !mobileMenu.classList.contains('menu-closed');
     }
 
     if (menuToggle && mobileMenu && menuOpen && menuClose) {
@@ -119,10 +119,15 @@
 
     function updateActiveLink() {
       var activeHash = '';
+      var closestTop = -Infinity;
       sectionLinks.forEach(function (link) {
         var target = document.querySelector(link.getAttribute('href'));
-        if (target && target.getBoundingClientRect().top <= 120) {
-          activeHash = link.getAttribute('href');
+        if (target) {
+          var top = target.getBoundingClientRect().top;
+          if (top <= 120 && top > closestTop) {
+            closestTop = top;
+            activeHash = link.getAttribute('href');
+          }
         }
       });
       setActiveLink(activeHash);
