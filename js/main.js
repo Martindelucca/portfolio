@@ -60,21 +60,21 @@
     }
 
     function closeMenu() {
-      if (mobileMenu) mobileMenu.classList.add('menu-closed');
+      if (mobileMenu) mobileMenu.classList.add('hidden');
       if (menuOpen) menuOpen.classList.remove('hidden');
       if (menuClose) menuClose.classList.add('hidden');
       if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
     }
 
     function openMenu() {
-      if (mobileMenu) mobileMenu.classList.remove('menu-closed');
+      if (mobileMenu) mobileMenu.classList.remove('hidden');
       if (menuOpen) menuOpen.classList.add('hidden');
       if (menuClose) menuClose.classList.remove('hidden');
       if (menuToggle) menuToggle.setAttribute('aria-expanded', 'true');
     }
 
     function isMenuOpen() {
-      return mobileMenu && !mobileMenu.classList.contains('menu-closed');
+      return mobileMenu && !mobileMenu.classList.contains('hidden');
     }
 
     if (menuToggle && mobileMenu && menuOpen && menuClose) {
